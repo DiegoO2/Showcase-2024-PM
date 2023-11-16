@@ -1,0 +1,5 @@
+main  img[src$="Logo.png"]{ /*Selects every img with a src that ends in .svg*/
+    height: 1.3rem;
+    display: inline-block;
+    vertical-align: middle;
+}

@@ -1,0 +1,16 @@
+footer img[src$=".svg"]{ /*Selects every img with a src that ends in .svg*/
+    height: 1.8rem;
+}
+nav {
+    background-color: green;
+}
+nav img[src$="cart.png"]{
+    height: 3rem;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+}
+nav a {
+    text-decoration: none;
+}
