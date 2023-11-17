@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Booking</title>
+    <link rel="stylesheet" href="Css/Nav&Footer.css">
+    <link rel="stylesheet" href="Css/styles.css">
 </head>
 <body>
     <nav>
@@ -31,11 +33,41 @@
             <h2>For: Wed Jan 24, 2024 </h2>
         </section>
         <section class="Booking-Form">
-            
+            <form action="NumberOfPeople&Name">
+                <label for="Adults">Number of Adults</label>
+                <select name="NofAdults" id="Adults">
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                    <option value="">8</option>
+                </select>
+                <label for="Kids">Number of Kids</label>
+                <select name="NofKids" id="Kids">
+                    <option value="">0</option>
+                    <option value="">1</option>
+                    <option value="">2</option>
+                    <option value="">3</option>
+                    <option value="">4</option>
+                    <option value="">5</option>
+                    <option value="">6</option>
+                    <option value="">7</option>
+                    <option value="">8</option>
+                </select>
+            </form>
+            <form action="NameOfPeople">
+                <label for="Name">Name of People</label> <!--The number of inputs will depend in how many people are selected. JS involved-->
+                <input type="text" id="Name1">   
+                <input type="text" id="Name2">
+                <input type="text" id="Name3">         
+            </form>
         </section>
         <a href="" class="GoBackArrow"></a>        <!-- go back arrow -->
         <a href="">See more</a>
-        <button>Ready?</button>
+        <input type="submit" value="Ready?">
     </main>
 </body>
 </html>
