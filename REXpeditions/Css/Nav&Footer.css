@@ -1,16 +1,30 @@
+
+/* Footer part  */
+
 footer img[src$=".svg"]{ /*Selects every img with a src that ends in .svg*/
     height: 1.8rem;
 }
-nav {
+
+/* Nav part  */
+
+.nav2 {
     background-color: green;
 }
-nav img[src$="cart.png"]{
+.nav2 img[src$="cart.png"]{
     height: 3rem;
 }
-nav ul {
+.nav2 ul {
     display: flex;
+    align-items: center;
+    justify-content: center;
     list-style: none;
 }
-nav a {
+.nav2 a {
     text-decoration: none;
+    color: white;
+}
+.nav2 li {
+    padding: 1rem;
+    margin: .3rem 1rem;
+    font-size: xx-large;
 }
