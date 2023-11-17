@@ -8,7 +8,7 @@ footer img[src$=".svg"]{ /*Selects every img with a src that ends in .svg*/
 /* Nav part  */
 
 .nav2 {
-    background-color: green;
+    background-color: #285C4D;
 }
 .nav2 img[src$="cart.png"]{
     height: 3rem;
@@ -28,3 +28,29 @@ footer img[src$=".svg"]{ /*Selects every img with a src that ends in .svg*/
     margin: .3rem 1rem;
     font-size: xx-large;
 }
+.DropDownL {
+    position: relative;
+    display: inline-block;
+}
+  
+.DropDownC {
+    display: none;
+    position: absolute;
+    background-color: #285C4D;
+    min-width: 160px;
+    padding: 12px 16px;
+    z-index: 1;
+    align-items: center;
+}
+  
+.DropDownL:hover .DropDownC {
+    display: block;
+}
+
+.nav2 .material-symbols-outlined {
+    font-variation-settings:
+    'FILL' #ffffff,
+    'wght' 400,
+    'GRAD' 0,
+    'opsz' 24
+  }
