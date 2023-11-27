@@ -1,4 +1,4 @@
-*{
+* {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -7,21 +7,150 @@
 /* Header part  */
 
 .HomeHeader {
-    height: 1028px;
-    /* background-image: url(/REXpeditions/Jurassic-Images/banner.png); */
-    background-color: rgb(0, 0, 0);
+    height: 90vh;
+    background-image: url(/REXpeditions/Jurassic-Images/banner.png);
+    background-size: cover;
+    /* background-color: rgb(0, 0, 0); */
     color: white;
+}
+.home-w {
     display: flex;
     flex-flow: row wrap;
     align-items: center;
     justify-content: center;
     align-content: center;
+    width: 90%;
+    margin: auto;
 }
 .HomeHeader h1 {
     font-size: 15rem;
     width: 100%;
     text-align: center;
 }
+
 .HomeHeader p {
+    width: 100%;
     font-size: 1.5rem;
+}
+
+.HomeHeader a {
+    background-color: white;
+    padding: 1rem 3.5rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+}
+
+
+
+
+
+.Premium-Tours h2{
+    font-size: 5rem;
+    text-align: center;
+
+}
+.Wrapper-P {
+    width: 80%;
+    margin: auto    ;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.P-Tour {
+    width: 30%;
+    background-color: #C6C89B;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: .5rem;
+}
+.P-Tour h3 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 1.5rem 0;
+    width: 100%;
+}
+.Basic-Tours h2{
+    font-size: 5rem;
+    text-align: center;
+}
+
+.Wrapper-B {
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    width: 80%;
+    height: 485px;
+    margin: auto;
+    scroll-behavior: smooth;
+
+}
+
+.B-Tour {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: auto;
+    background-color: #E1FAFF;
+    justify-content: space-between;
+}
+
+.B-Tour-L {
+    margin:  0 auto;
+    width: 48%;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+}
+
+.B-Tour img {
+    width: 48%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.B-Tour h3 {
+    width: 100%;
+    font-size: 3rem;
+}
+.B-Tour p {
+    font-size: 1.5rem;
+}
+.B-Tour a {
+    background-color: #7FD9FC;
+    padding: 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 80%;
+}
+.WhatIs {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.WhatIs-L {
+    width: 40%;
+}
+
+.WhatIs img {
+    width: 40%;
+}
+
+.Our-Staff {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.Quote {
+    display: flex;
+    padding-left: 20rem;
+}
+.Staff {
+    width: 30%;
 }

@@ -4,19 +4,41 @@
 footer img[src$=".svg"]{ /*Selects every img with a src that ends in .svg*/
     height: 1.8rem;
 }
-
+footer {
+    height: 20vh;
+    background-color: #027200;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+}
+footer ul {
+    list-style: none;
+}
+footer a {
+    color: white;
+    text-decoration: none;
+}
+footer img[src$=".png"] {
+    height: 7rem;
+}
 /* Nav part  */
 
 .nav2 {
     background-color: #285C4D;
+    height: 10vh;
+    display: flex;
 }
 .nav2 img[src$="cart.png"]{
     height: 3rem;
 }
 .nav2 ul {
+    margin: auto;
+    width: 80%;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-around;
     list-style: none;
 }
 .nav2 a {
@@ -24,15 +46,15 @@ footer img[src$=".svg"]{ /*Selects every img with a src that ends in .svg*/
     color: white;
 }
 .nav2 li {
-    padding: 1rem;
-    margin: .3rem 1rem;
     font-size: xx-large;
+}
+.nav2 .DropDownC {
+    font-size: large;
 }
 .DropDownL {
     position: relative;
     display: inline-block;
 }
-  
 .DropDownC {
     display: none;
     position: absolute;
@@ -47,10 +69,10 @@ footer img[src$=".svg"]{ /*Selects every img with a src that ends in .svg*/
     display: block;
 }
 
-.nav2 .material-symbols-outlined {
-    font-variation-settings:
-    'FILL' #ffffff,
-    'wght' 400,
-    'GRAD' 0,
-    'opsz' 24
-  }
+.material-symbols-outlined {
+    color: white;
+
+}
+.nav2 a[href$=".html"]:hover {
+    text-decoration: underline;
+}
