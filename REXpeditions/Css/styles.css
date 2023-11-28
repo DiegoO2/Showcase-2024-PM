@@ -2,9 +2,11 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth
 }
 /* fonts import */
 @import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 /* Header part home */
 
 .HomeHeader {
@@ -49,11 +51,26 @@
 
 }
 
+/* normal header */
+
+.Nheader {
+    height: 10vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner2.png);
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    align-items: center;
+}
+
+
+
 /* premium tours index */
 
 .Premium-Tours {
     background-color: #577c60;
-    height: 70vh;
+    max-height: 60vh;
 }
 
 .Premium-Tours h2{
@@ -97,8 +114,11 @@
     background-color: #7FD9FC;
     padding: 1rem 2rem;
     border-radius: .8rem;
+    margin-bottom: 3rem;
     border: solid black 1px;
-    margin-bottom: 1rem;
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
 }
 
 /* basic tours index */
@@ -110,20 +130,25 @@
 }
 
 .Wrapper-B {
-    overflow: hidden;
     position: relative;
-    text-align: center;
-    width: 80%;
-    height: 485px;
-    margin: auto;
+    margin: 0 auto;
+    max-width: 80rem;
+}
+.slides-B {
+    display: flex;
+    overflow-x: hidden;
+    aspect-ratio: 32/10;
+    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
-
+    position: relative;
 }
 
 .B-Tour {
+    max-width: 80rem;
+    flex:1 0 100%;
+    scroll-snap-align: start;
     display: flex;
     flex-flow: row wrap;
-    width: 100%;
     margin: auto;
     background-color: #E1FAFF;
     justify-content: space-between;
@@ -160,7 +185,18 @@
     font-size: 1.2rem;
     margin-left: 80%;
 }
-
+.B-Nav {
+    width: 4rem;
+    display: flex;
+    margin: auto;
+    column-gap: 1rem;
+    
+}
+.B-Nav a {
+    background-color: gray;
+    padding: 1rem;
+    border-radius: 50%;
+}
 /* what is index  */
 
 .WhatIs {
@@ -189,4 +225,18 @@
 }
 .Staff {
     width: 30%;
+}
+
+
+/* premium tours tours */
+
+.PremiumTours {
+    display: flex;
+    justify-content: center;
+}
+.PremiumTours img[src$=".jpg"] {
+    width: 40%;
+}
+.PTL {
+    width: 40%;
 }
