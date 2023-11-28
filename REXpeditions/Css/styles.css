@@ -3,15 +3,19 @@
     padding: 0;
     margin: 0;
 }
-
-/* Header part  */
+/* fonts import */
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+/* Header part home */
 
 .HomeHeader {
     height: 90vh;
-    background-image: url(/REXpeditions/Jurassic-Images/banner.png);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner.jpg);
     background-size: cover;
-    /* background-color: rgb(0, 0, 0); */
     color: white;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    align-items: center;
 }
 .home-w {
     display: flex;
@@ -19,11 +23,12 @@
     align-items: center;
     justify-content: center;
     align-content: center;
-    width: 90%;
+    width: 50%;
     margin: auto;
 }
 .HomeHeader h1 {
-    font-size: 15rem;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 9rem;
     width: 100%;
     text-align: center;
 }
@@ -34,23 +39,29 @@
 }
 
 .HomeHeader a {
-    background-color: white;
-    padding: 1rem 3.5rem;
+    background-color: #53BC5B;
+    padding: 1rem 5%;
     border-radius: 1rem;
     text-decoration: none;
     font-size: 2rem;
     color: black;
+    margin-top: 2rem; 
+
 }
 
+/* premium tours index */
 
-
-
+.Premium-Tours {
+    background-color: #577c60;
+    height: 70vh;
+}
 
 .Premium-Tours h2{
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
-
+    padding: 3rem 0;
 }
+
 .Wrapper-P {
     width: 80%;
     margin: auto    ;
@@ -58,9 +69,14 @@
     flex-flow: row wrap;
     justify-content: space-between;
 }
+.P-Tour img {
+    margin-top: 1rem;
+    width: 90%;
+    object-fit: cover;
+}
 .P-Tour {
     width: 30%;
-    background-color: #C6C89B;
+    /* background-color: #C6C89B; */
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -69,13 +85,28 @@
 }
 .P-Tour h3 {
     text-align: center;
-    font-size: 3rem;
-    margin: 1.5rem 0;
+    font-size: 2rem;
     width: 100%;
 }
+.P-Tour p {
+    width: 90%;
+    font-size: large;
+    margin:1rem 0;
+}
+.P-Tour a {
+    background-color: #7FD9FC;
+    padding: 1rem 2rem;
+    border-radius: .8rem;
+    border: solid black 1px;
+    margin-bottom: 1rem;
+}
+
+/* basic tours index */
+
 .Basic-Tours h2{
-    font-size: 5rem;
+    font-size: 3rem;
     text-align: center;
+    padding: 3rem 0;
 }
 
 .Wrapper-B {
@@ -114,7 +145,7 @@
 
 .B-Tour h3 {
     width: 100%;
-    font-size: 3rem;
+    font-size: 2rem;
 }
 .B-Tour p {
     font-size: 1.5rem;
@@ -129,6 +160,9 @@
     font-size: 1.2rem;
     margin-left: 80%;
 }
+
+/* what is index  */
+
 .WhatIs {
     display: flex;
     flex-flow: row wrap;
@@ -141,6 +175,8 @@
 .WhatIs img {
     width: 40%;
 }
+
+/* our staff about us */
 
 .Our-Staff {
     display: flex;
