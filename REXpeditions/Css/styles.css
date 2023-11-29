@@ -69,14 +69,23 @@
     font-size: 6rem;
 }
 
+/* main index */
+
+main.index {
+    background-color: rgba(204, 255, 221, 0.293);
+}
+
 
 /* premium tours index */
 
 .Premium-Tours {
     position: relative;
     overflow: auto;
-    background-color: #577c60;
     min-height: 60vh;
+    width: 100%;
+    margin: auto;
+
+
     
 }
 
@@ -94,7 +103,7 @@
     justify-content: center;
     align-items: stretch;
     margin-bottom: 2rem;
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto 2rem auto;
     font-family: 'Sorts Mill Goudy', serif;
 
@@ -150,10 +159,11 @@
 .slides-B {
     display: flex;
     overflow-x: hidden;
-    aspect-ratio: 32/10;
+    aspect-ratio: 31/10;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     position: relative;
+    
 }
 
 .B-Tour {
@@ -199,11 +209,11 @@
     margin-left: 80%;
 }
 .B-Nav {
-    width: 4rem;
+    width: 17.2rem;
     display: flex;
     margin: auto;
     column-gap: 1rem;
-    
+    z-index: 2;
 }
 .B-Nav a {
     background-color: gray;
@@ -218,21 +228,24 @@
     flex-flow: row  wrap;
     justify-content: center;
     align-items: stretch;
-    max-width: 80%;
-    margin: 2rem auto;
+    width: 100%;
+    margin: 0 auto;
     font-family: 'Sorts Mill Goudy', serif;
- 
+    padding: 2rem 0;
+
 }
 
 .Quote {
     display: flex;
+    width: 80%;
+    position: relative;
 }
 .Quote img {
     object-fit: cover;
     width: 50%;
 }
 .Quote-L {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-flow: row wrap;
     align-content: center;
@@ -243,12 +256,16 @@
     width: 100%;    
     text-align: center;
 }
+.Quote-L q {
+    width: 100%;
+    text-align: center;
+} 
 .Quote-L p {
     width: 100%;
     text-align: right;
 }
 .Contact {
-    width: 100%;
+    width: 80%;
     display: flex;
 }
 .Contact img {
@@ -256,7 +273,7 @@
     width: 50%;
 }
 .Contact-L {
-    width: 100%;
+    width: 50%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -287,7 +304,7 @@
 
 .AboutUs {
     background-color: rgba(204, 255, 221, 0.293);
-    padding-top: 2rem;
+    padding: 2rem 0;
 }
 
 .WhatIs { /*  For mobile move the jurassic image to the top :D */
@@ -304,7 +321,7 @@
     width: 50%;
     display: flex;
     flex-flow: row wrap;
-    align-content: flex-start;
+    align-content: center;
     padding: 3rem;
 }
 .WhatIs-L h2 {
@@ -318,7 +335,7 @@
 }
 .WhatIs img {
     width: 50%;
-    object-fit: contain;
+    object-fit: contain; /*  keep contain */
     border-radius: 5rem;
 }
 .WhatIs-L a {
@@ -343,19 +360,29 @@
     display: flex;
     flex-flow: row wrap;
     align-items: stretch;
-    max-width: 80%;
-    margin: 2rem auto 2rem auto;
+    width: 80%;
+    margin: 2rem auto  auto;
     font-family: 'Sorts Mill Goudy', serif;
     justify-content: space-between;
+    column-gap: 20%;
 }
 
 .Staff {
-    width: 30%;
+    position: relative;
+    width: 20%;
 }
-
+.Staff img {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 1rem;
+}
+.Staff p {
+    width: 100%;
+    font-size: 1.5rem;
+}
 /* h2 tours  */
 
-.Tours {
+main.Tours {
     background-color: rgba(204, 255, 221, 0.293);
 }
 
@@ -555,3 +582,156 @@
     margin-bottom: 1rem;
 
 }
+
+/* Contact page css */
+.ContactForm form {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.ContactForm form:nth-child(even){
+    margin:1rem 0;
+}
+
+
+#Email {
+    width: 80%;
+    margin-right: 50;
+}
+
+.ContactForm[for=email] {
+    width: 50%;
+}
+
+#FirstName {
+    width: 20%;
+    margin-right: 80%;
+
+}
+
+#LastName { 
+    width: 20%;
+    margin-right: 80%;
+}
+
+#Numbers {
+    margin-right: 5%;
+}
+
+
+/* hunting  */
+
+main.hunting {
+    background-color: rgba(204, 255, 221, 0.293);
+}
+
+/* timer hunting  */
+
+.Timer::before {
+    content: "";
+    background-color: rgb(75, 113, 75);
+    padding: 1px 0;
+    display: block;
+    width: 100%;
+    margin: 3rem 0;
+}
+
+
+.Timer {
+    width: 100%;
+    position: relative;
+}
+
+.Hunting-W table {
+    margin: auto;
+    margin-top: 3rem;
+}
+.Hunting-W table th{
+    font-size: 10rem;
+    font-family: 'Ubuntu', sans-serif;
+    padding: 1rem;
+}
+.Hunting-W table td{
+    font-size: 5rem;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: lighter;
+}
+
+
+
+
+/* .T-numbers {
+    background-color: #E1FAFF;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    list-style: none;
+    font-size: 10rem;
+}
+.T-dates {
+    display: flex;
+    list-style: none;
+    font-size: 3rem;
+    justify-content: space-between;
+
+} */
+
+/* Hunting extra hunting */
+
+.HL2::before {
+    content: "";
+    background-color: rgb(75, 113, 75);
+    padding: 1px 0;
+    display: block;
+    width: 100%;
+    margin: 3rem 0;
+}
+
+
+.Hunting-W {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    width: 80%;
+    margin: 0 auto 0 auto;
+    padding-bottom: 3rem;
+}
+
+
+.HL2 {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 100%;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+.HL2 img {
+    width: 50%;
+    object-fit: cover;
+}
+.HL2 p {
+    padding: 2rem;
+    width: 50%;
+    font-size: 1.5rem;
+}
+
+.HL2 a {
+    width: 30%;
+    background-color: #326c37;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 1rem auto 0 auto;
+}
+
+
+
