@@ -5,7 +5,9 @@ footer img[src$=".svg"]{ /*Selects every img with a src that ends in .svg*/
     height: 1.8rem;
 }
 footer {
-    height: 25vh;
+    overflow: auto;
+    position: relative;
+    max-height: 25vh;
     background-color: #027200;
     display: flex;
     justify-content: space-around;

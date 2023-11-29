@@ -10,7 +10,8 @@
 /* Header part home */
 
 .HomeHeader {
-    height: 93vh;
+    width: 100%;
+    min-height: 93vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner.jpg);
     background-size: cover;
     color: white;
@@ -18,6 +19,7 @@
     flex-flow: row wrap;
     align-content: center;
     align-items: center;
+    overflow: auto;
 }
 .home-w {
     display: flex;
@@ -47,7 +49,7 @@
     text-decoration: none;
     font-size: 2rem;
     color: black;
-    margin-top: 2rem; 
+    margin: 2rem 0; 
 
 }
 
@@ -71,8 +73,11 @@
 /* premium tours index */
 
 .Premium-Tours {
+    position: relative;
+    overflow: auto;
     background-color: #577c60;
-    max-height: 60vh;
+    min-height: 60vh;
+    
 }
 
 .Premium-Tours h2{
@@ -82,11 +87,17 @@
 }
 
 .Wrapper-P {
-    width: 80%;
-    margin: auto    ;
-    display: flex;
+    margin: auto;
     flex-flow: row wrap;
-    justify-content: space-between;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 2rem;
+    max-width: 80%;
+    margin: 0 auto 2rem auto;
+    font-family: 'Sorts Mill Goudy', serif;
+
 }
 .P-Tour img {
     margin-top: 1rem;
@@ -200,12 +211,77 @@
     border-radius: 50%;
 }
 
-/*  contact and quote index  */
+/*  EXTRA quote and contact index  */
+.Extra {
+    position: relative;
+    display: flex;
+    flex-flow: row  wrap;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 80%;
+    margin: 2rem auto;
+    font-family: 'Sorts Mill Goudy', serif;
+ 
+}
 
 .Quote {
     display: flex;
-    padding-left: 20rem;
 }
+.Quote img {
+    object-fit: cover;
+    width: 50%;
+}
+.Quote-L {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    padding: 0 2rem;
+}
+.Quote-L h2{
+    font-size: 2rem;
+    width: 100%;    
+    text-align: center;
+}
+.Quote-L p {
+    width: 100%;
+    text-align: right;
+}
+.Contact {
+    width: 100%;
+    display: flex;
+}
+.Contact img {
+    object-fit: cover;
+    width: 50%;
+}
+.Contact-L {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-content: center;
+}
+.Contact-L h2{
+    font-size: 2rem;
+    width: 100%;    
+    text-align: center;
+}
+.Contact-L a {
+    background-color: #91c41b;
+    width: 60%;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-top: 2rem;
+
+}
+
 
 /* what is about us  */
 
@@ -241,6 +317,7 @@
     font-size: 1.5rem
 }
 .WhatIs img {
+    width: 50%;
     object-fit: contain;
     border-radius: 5rem;
 }
@@ -258,12 +335,6 @@
     margin-top: 2rem;
 
 }
-
-
-.WhatIs img {
-    width: 50%;
-}
-
 
 /* our staff about us */
 
@@ -296,7 +367,7 @@
     margin-right: 10%;
 }
 
-/* premium tours tours no touch this part, I did good here*/
+/* premium tours tours no touch this part, I did good here it is semi web responsable*/
 
 .PremiumTours {
     position: relative;
