@@ -5,12 +5,12 @@
     scroll-behavior: smooth
 }
 /* fonts import */
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
 
 /* Header part home */
 
 .HomeHeader {
-    height: 90vh;
+    height: 93vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner.jpg);
     background-size: cover;
     color: white;
@@ -54,16 +54,18 @@
 /* normal header */
 
 .Nheader {
-    height: 10vh;
+    height: 20vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner2.png);
     background-size: cover;
     color: white;
     display: flex;
-    flex-flow: row wrap;
     align-content: center;
     align-items: center;
+    justify-content: center;
 }
-
+.Nheader h1 { 
+    font-size: 6rem;
+}
 
 
 /* premium tours index */
@@ -197,46 +199,288 @@
     padding: 1rem;
     border-radius: 50%;
 }
-/* what is index  */
 
-.WhatIs {
-    display: flex;
-    flex-flow: row wrap;
-}
+/*  contact and quote index  */
 
-.WhatIs-L {
-    width: 40%;
-}
-
-.WhatIs img {
-    width: 40%;
-}
-
-/* our staff about us */
-
-.Our-Staff {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
-}
 .Quote {
     display: flex;
     padding-left: 20rem;
 }
+
+/* what is about us  */
+
+.AboutUs {
+    background-color: rgba(204, 255, 221, 0.293);
+    padding-top: 2rem;
+}
+
+.WhatIs { /*  For mobile move the jurassic image to the top :D */
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 80%;
+    margin: 0 auto 2rem auto;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+
+.WhatIs-L {
+    width: 50%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    padding: 3rem;
+}
+.WhatIs-L h2 {
+    width: 100%;
+    text-align: center;
+    font-size: 3rem
+}
+.WhatIs-L p {
+    text-align: justify;
+    font-size: 1.5rem
+}
+.WhatIs img {
+    object-fit: contain;
+    border-radius: 5rem;
+}
+.WhatIs-L a {
+    background-color: #326c37;
+    width: 100%;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-top: 2rem;
+
+}
+
+
+.WhatIs img {
+    width: 50%;
+}
+
+
+/* our staff about us */
+
+.Our-Staff {
+    position: relative;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: stretch;
+    max-width: 80%;
+    margin: 2rem auto 2rem auto;
+    font-family: 'Sorts Mill Goudy', serif;
+    justify-content: space-between;
+}
+
 .Staff {
     width: 30%;
 }
 
+/* h2 tours  */
 
-/* premium tours tours */
+.Tours {
+    background-color: rgba(204, 255, 221, 0.293);
+}
+
+.Tours h2 {
+    padding: 4rem 0;
+    font-size: 3rem;
+    font-family: 'Sorts Mill Goudy', serif;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+/* premium tours tours no touch this part, I did good here*/
 
 .PremiumTours {
+    position: relative;
     display: flex;
     justify-content: center;
+    align-items: stretch;
+    margin-bottom: 2rem;
+    max-width: 80%;
+    margin: 0 auto 2rem auto;
+    font-family: 'Sorts Mill Goudy', serif;
 }
-.PremiumTours img[src$=".jpg"] {
-    width: 40%;
+
+.PremiumTours::after, .PremiumTours::before, .BasicTours::after, .BasicTours::before{  /* For both basic and premium tours */
+    content: "";
+    background-color: rgb(75, 113, 75);
+    padding: .5rem;
+}
+
+.PremiumTours img[src$=".jpg"] { /* for mobile version use media to column for the image */
+    object-fit: cover;
+    width:50%;
 }
 .PTL {
-    width: 40%;
+    width:50%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.PremiumTours h3 {
+    width: 100%;
+    font-size: 2.5rem;
+}
+.PremiumTours h4 {
+    width: 100%;
+    font-size: 1.5rem;
+    color: #305239;
+}
+.PremiumTours p {
+    font-size: large;
+    text-align: justify;
+    margin: 1rem auto;
+}
+.PremiumTours ul {
+    list-style: none;
+    font-size: 2rem;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+
+}
+.PremiumTours a {
+    background-color: #326c37;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin-bottom: 1rem;
+}
+.Tours  img[src$="Logo.png"]{ 
+    height: 2rem;
+    display: inline;
+    vertical-align: top;
+}
+
+/* basic tours tours */
+
+.BasicTours {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 2rem;
+    max-width: 80%;
+    margin: 0 auto 2rem auto;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+.BTL {
+    width:50%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.BasicTours img[src$=".jpg"] { /* for mobile version use media to column for the image */
+    object-fit: cover;
+    width:50%;
+}
+.BasicTours h3 {
+    width: 100%;
+    font-size: 2.5rem;
+}
+.BasicTours h4 {
+    width: 100%;
+    font-size: 1.5rem;
+    color: #305239;
+}
+.BasicTours p {
+    font-size: large;
+    text-align: justify;
+    margin: 1rem auto;
+}
+.BasicTours ul {
+    list-style: none;
+    font-size: 2rem;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+
+}
+.BasicTours a {
+    width: 80%;
+    background-color: #326c37;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 auto 1rem auto;
+}
+
+/* Hunting tours  */
+#HTitle::before {
+    content: "";
+    background-color: rgb(75, 113, 75);
+    padding: 1px 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+#HTitle {
+    text-align: center;
+}
+.Hunting {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    max-width: 80%;
+    margin: 0 auto 0 auto;
+    padding-bottom: 3rem;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+.HL {
+    width:50%;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+    padding: 2rem;
+}
+.Hunting a {
+    width: 100%;
+    background-color: #326c37;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 auto 1rem auto;
+}
+.Hunting img[src$=".jpg"] { /* for mobile version use media to column for the image */
+    object-fit: cover;
+    width:50%;
+}
+.Hunting p {
+    font-size: large;
+    text-align: justify;
+    margin: 1rem auto;
+}
+.Hunting ul {
+    list-style: none;
+    font-size: 2rem;
+    align-self: flex-end;
+    margin-bottom: 1rem;
+
 }

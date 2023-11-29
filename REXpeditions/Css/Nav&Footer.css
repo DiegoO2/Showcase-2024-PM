@@ -5,7 +5,7 @@ footer img[src$=".svg"]{ /*Selects every img with a src that ends in .svg*/
     height: 1.8rem;
 }
 footer {
-    height: 20vh;
+    height: 25vh;
     background-color: #027200;
     display: flex;
     justify-content: space-around;
@@ -15,22 +15,37 @@ footer {
 footer ul {
     list-style: none;
 }
+footer li {
+    font-size: 1.5rem;
+}
+footer h4 {
+    font-size: 2rem;
+}
 footer a {
     color: white;
     text-decoration: none;
 }
+footer #FB {
+    padding: 2rem 3rem;
+    background-color: rgb(162, 220, 75);
+    border-radius: 1rem;
+    color: black;
+    font-size: 2rem;
+}
 footer img[src$=".png"] {
-    height: 7rem;
+    height: 10rem;
 }
 /* Nav part  */
 
 .nav2 {
     background-color: #285C4D;
-    height: 10vh;
+    height: 7vh;
     display: flex;
 }
 .nav2 img[src$="cart.png"]{
-    height: 3rem;
+    display: block;
+    height: 2rem;
+    align-self: center;
 }
 .nav2 ul {
     margin: auto;
@@ -71,7 +86,6 @@ footer img[src$=".png"] {
 
 .material-symbols-outlined {
     color: white;
-
 }
 .nav2 a[href$=".html"]:hover {
     text-decoration: underline;
