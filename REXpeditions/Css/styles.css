@@ -152,11 +152,19 @@ main.index {
     margin: auto;
     column-gap: 1rem;
     z-index: 2;
+    position: relative;
 }
 .B-Nav a {
     background-color: gray;
     padding: 1rem;
     border-radius: 50%;
+}
+.B-Nav a:hover {
+    background-color: #326c37;
+}
+
+.B-Nav a:active {
+    background-color: #232323;
 }
 
 /*  EXTRA quote and contact index  */
@@ -614,15 +622,17 @@ main.hunting {
 .Hunting-W table {
     margin: auto;
     margin-top: 3rem;
+    font-family: 'Nova Square', sans-serif;
+
 }
 .Hunting-W table th{
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Nova Square', sans-serif;
     padding: 1vw;
     font-size: 8vw;
 }
 .Hunting-W table td{
     font-size: 3vw;
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'Nova Square', sans-serif;
     font-weight: lighter;
     text-align: center;
 
@@ -699,6 +709,193 @@ main.hunting {
     color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 1rem auto 0 auto;
+}
+
+/* calendar booking  */
+
+
+.booking {
+    padding-bottom: 3rem;
+    width: 100%;
+    background-color: #305239;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Sorts Mill Goudy', serif;
+
+}
+.booking h2 {
+    width: 100%;
+    font-size: 4rem;
+    margin: 3rem;
+    text-align: center;
+}
+.Calendar {
+    width: 80%;
+    height: 48rem;
+    overflow: hidden;
+    border-radius: 1rem;
+}
+.Date {
+    background-color: #3aab59;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+}
+.Date div {
+    margin: 0 2rem;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+.Date div h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+}
+.Date div em {
+    font-family: 'Work Sans', sans-serif;
+}
+.Date div p {
+    width: 100%;
+    text-align: center;
+    font-size: 1.5rem;
+}
+.Date a {
+    margin: 0 1rem;
+    text-decoration: none;
+    color: white;
+    font-size: 3rem;
+}
+.Weekdays {
+    background-color: #305239;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin: auto;
+    height: 10%;
+    background-color: #61976f;
+} 
+.Weekdays div {
+    width: calc(100%/7);
+    text-align: center;
+    font-size: 2rem;
+}
+.Days {
+    padding: 1rem 0;
+    background-color: #232323;
+    width: 100%;
+    height: 70%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.Days div {
+    font-size: 1.5rem;
+    width: calc(100%/7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Work Sans', sans-serif;
+
+}
+.Days div a {
+    text-decoration: none;
+    color: white;
+}
+.Pre-D , .Next-D {
+    opacity: 0.5;
+}
+.Today {
+    background-color: rgb(44, 122, 44);
+}
+.Days div:hover:not(.Today){
+    border: gray solid 1px;
+    background-color: #4d4d4d;
+}
+
+/* Booking 2 */
+.booking2 {
+    background-color: #305239;
+    padding: 3rem 0;
+    color: white;
+}
+.booking2 h2 {
+    width: 100%;
+    font-size: 4rem;
+    text-align: center;
+}
+.GoBackArrow img{
+    width: 2rem;
+}
+
+table.S-table {
+    width: 80%;
+    margin: auto;
+    margin-top: 3rem;
+    font-family: 'Nova Square', sans-serif;
+    border-collapse: collapse;
+    border: #232323 solid 3px;
+
+}
+table.S-table th{
+    font-family: 'Nova Square', sans-serif;
+    padding: 2vw;
+    font-size: 2vw;
+    border: #232323 solid 3px;
+    background-color: #3aab59;
+}
+table.S-table td{
+    font-size: 3vw;
+    font-family: 'Nova Square', sans-serif;
+    font-weight: lighter;
+    text-align: center;
+    background-color: #232323;
+    width: 2vw;
+    height: 6vh;
+
+}
+table.S-table td a{
+    background-color: rgb(44, 122, 44);
+    display: block;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* Booking 3 */
+
+main.booking3 {
+    background-color: rgba(204, 255, 221, 0.293);
+}
+
+
+.Booking-Form form {
+    display: flex;
+    flex-flow: row wrap;
+    width: 80%;
+    margin: 0 auto;
+    background-color:rgba(115, 130, 115, 0.186);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+.Booking-Form label{
+    margin: 1rem 0;
+    width: 100%;
+    font-size: 1.5rem;
+}
+#Adults, #Kids  {
+    width: 20rem;
+    font-size: 1rem;
+    padding: .3rem;
+    border-radius: .3rem;
+    border: solid rgb(115, 130, 115) 1px;
 }
 
 

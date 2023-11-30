@@ -44,9 +44,9 @@ footer img[src$=".png"] {
     height: 7vh;
     display: flex;
 }
-.nav2 img[src$="cart.png"]{
+.nav2 img[src$=".png"]{
     display: block;
-    height: 2vw;
+    height: 1.5rem;
     align-self: center;
 }
 .nav2 ul {
@@ -63,7 +63,7 @@ footer img[src$=".png"] {
     color: white;
 }
 .nav2 li {
-    font-size: 2.5vw;
+    font-size: 1.5rem;
 }
 .nav2 .DropDownC {
     font-size: large;
@@ -151,5 +151,5 @@ footer img[src$=".png"] {
     justify-content: center;
 }
 .Nheader h1 { 
-    font-size: 6vw;
+    font-size: 6rem;
 }
