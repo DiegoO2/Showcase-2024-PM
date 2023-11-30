@@ -46,7 +46,7 @@ footer img[src$=".png"] {
 }
 .nav2 img[src$="cart.png"]{
     display: block;
-    height: 2rem;
+    height: 2vw;
     align-self: center;
 }
 .nav2 ul {
@@ -63,7 +63,7 @@ footer img[src$=".png"] {
     color: white;
 }
 .nav2 li {
-    font-size: xx-large;
+    font-size: 2.5vw;
 }
 .nav2 .DropDownC {
     font-size: large;
@@ -91,4 +91,65 @@ footer img[src$=".png"] {
 }
 .nav2 a[href$=".html"]:hover {
     text-decoration: underline;
+}
+/* Header part home */
+
+.HomeHeader {
+    width: 100%;
+    min-height: 93vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner.jpg);
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    align-content: center;
+    align-items: center;
+    overflow: auto;
+}
+.home-w {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    width: 50%;
+    margin: auto;
+}
+.HomeHeader h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 9rem;
+    width: 100%;
+    text-align: center;
+}
+
+.HomeHeader p {
+    width: 100%;
+    font-size: 1.5rem;
+}
+
+.HomeHeader a {
+    background-color: #53BC5B;
+    padding: 1rem 5%;
+    border-radius: 1rem;
+    text-decoration: none;
+    font-size: 2rem;
+    color: black;
+    margin: 2rem 0; 
+
+}
+
+/* normal header */
+
+.Nheader {
+    height: 20vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner2.png);
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+}
+.Nheader h1 { 
+    font-size: 6vw;
 }
