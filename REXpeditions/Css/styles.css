@@ -100,17 +100,16 @@ main.index {
     flex-flow: row wrap;
     position: relative;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: stretch;
-    margin-bottom: 2rem;
     width: 80%;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 0 auto;
     font-family: 'Sorts Mill Goudy', serif;
 
 }
 .P-Tour img {
     margin-top: 1rem;
-    width: 90%;
+    width: 100%;
     object-fit: cover;
 }
 .P-Tour {
@@ -128,7 +127,8 @@ main.index {
     width: 100%;
 }
 .P-Tour p {
-    width: 90%;
+    width: 100%;
+    text-align: justify;
     font-size: large;
     margin:1rem 0;
 }
@@ -136,7 +136,6 @@ main.index {
     background-color: #7FD9FC;
     padding: 1rem 2rem;
     border-radius: .8rem;
-    margin-bottom: 3rem;
     border: solid black 1px;
     text-decoration: none;
     color: black;
@@ -154,7 +153,7 @@ main.index {
 .Wrapper-B {
     position: relative;
     margin: 0 auto;
-    max-width: 80rem;
+    max-width: 80%;
 }
 .slides-B {
     display: flex;
@@ -167,7 +166,7 @@ main.index {
 }
 
 .B-Tour {
-    max-width: 80rem;
+    max-width: 100%;
     flex:1 0 100%;
     scroll-snap-align: start;
     display: flex;
@@ -222,6 +221,7 @@ main.index {
 }
 
 /*  EXTRA quote and contact index  */
+
 .Extra {
     position: relative;
     display: flex;
@@ -231,7 +231,7 @@ main.index {
     width: 100%;
     margin: 0 auto;
     font-family: 'Sorts Mill Goudy', serif;
-    padding: 2rem 0;
+    padding: 6rem 0;
 
 }
 
@@ -298,7 +298,6 @@ main.index {
     margin-top: 2rem;
 
 }
-
 
 /* what is about us  */
 
@@ -584,38 +583,71 @@ main.Tours {
 }
 
 /* Contact page css */
+
+main.contact {
+    background-color: rgba(204, 255, 221, 0.293);
+    padding: 3rem 0;
+}
+
 .ContactForm form {
     display: flex;
     flex-flow: row wrap;
-}
-
-.ContactForm form:nth-child(even){
-    margin:1rem 0;
-}
-
-
-#Email {
     width: 80%;
-    margin-right: 50;
+    margin: 0 auto;
+    background-color:rgba(115, 130, 115, 0.186);
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.ContactForm label{
+    margin: 1rem 0;
+    width: 100%;
+    font-size: 1.5rem;
 }
 
 .ContactForm[for=email] {
     width: 50%;
 }
 
-#FirstName {
-    width: 20%;
-    margin-right: 80%;
+#FirstName, #LastName, #Email, #Phone  {
+    width: 20rem;
+    font-size: 1rem;
+    padding: .3rem;
+    border-radius: .3rem;
+    border: solid rgb(115, 130, 115) 1px;
 
 }
-
-#LastName { 
-    width: 20%;
-    margin-right: 80%;
+#QFR{
+    width: 100%;
+    resize: vertical;
+    height: 10rem;
+    font-size: 1rem;
+    padding: .3rem;
+    border-radius: .3rem;
 }
-
 #Numbers {
-    margin-right: 5%;
+    font-size: 1rem;
+    border-radius: .3rem;
+    padding: .3rem;
+
+}
+.ContactForm div {
+    width: 100%;
+    margin: 1rem 0;
+}
+.ContactForm [type=submit] {
+    width: 100%;
+    background-color: #326c37;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 auto 1rem auto;
+
 }
 
 
