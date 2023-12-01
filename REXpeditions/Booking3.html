@@ -7,7 +7,13 @@
     <title>Booking</title>
     <link rel="stylesheet" href="Css/Nav&Footer.css">
     <link rel="stylesheet" href="Css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Sorts+Mill+Goudy&display=swap"
+        rel="stylesheet">
+
 </head>
 
 <body>
@@ -52,7 +58,7 @@
     </header>
     <main class="booking3">
         <section class="Day-Title">
-            <h2>For: Wed Jan 24, 2024 </h2>
+            <h2>For: Wed Jan 24, 2024</h2>
         </section>
         <section class="Booking-Form">
             <form action="NumberOfPeople&Name">
@@ -88,10 +94,14 @@
                 <input type="text" id="Name3">
             </form>
         </section>
-        <a href="" class="GoBackArrow"><img src="Jurassic-Images/GoBackArrow.svg" alt="Go Back Arrow Icon"></a>
+        <div class="GoBackArrow">
+            <a href=""><img src="Jurassic-Images/GoBackArrow.svg" alt="Go Back Arrow Icon"></a>
+        </div>
         <!--Go back arrow. JS involved?-->
-        <a href="">See more</a>
-        <input type="submit" value="Ready?">
+        <div class="buttons">
+            <a href="" id="SeeMore">See more</a>
+            <input type="submit" value="Ready?">
+        </div>
     </main>
 </body>
 

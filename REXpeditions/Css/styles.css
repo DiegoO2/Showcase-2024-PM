@@ -594,7 +594,6 @@ main.contact {
     color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 0 auto 1rem auto;
-
 }
 
 
@@ -719,10 +718,9 @@ main.hunting {
     width: 100%;
     background-color: #305239;
     color: white;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: center;
+    display: grid;
     align-items: center;
+    justify-items: center;
     font-family: 'Sorts Mill Goudy', serif;
 
 }
@@ -759,6 +757,7 @@ main.hunting {
 }
 .Date div em {
     font-family: 'Work Sans', sans-serif;
+    font-style: normal;
 }
 .Date div p {
     width: 100%;
@@ -825,16 +824,28 @@ main.hunting {
     background-color: #305239;
     padding: 3rem 0;
     color: white;
+    
 }
 .booking2 h2 {
     width: 100%;
     font-size: 4rem;
     text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
 }
-.GoBackArrow img{
-    width: 2rem;
-}
+.GoBackArrow {
+    position: absolute;
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-start;
+    align-self: flex-end;
+    top: 50%;
 
+}
+.GoBackArrow a img{
+    width: 4rem;
+}
 table.S-table {
     width: 80%;
     margin: auto;
@@ -846,10 +857,12 @@ table.S-table {
 }
 table.S-table th{
     font-family: 'Nova Square', sans-serif;
-    padding: 2vw;
-    font-size: 2vw;
+    font-size: 3vw;
     border: #232323 solid 3px;
     background-color: #3aab59;
+    height: 6vh;
+    width: 2vw;
+
 }
 table.S-table td{
     font-size: 3vw;
@@ -866,21 +879,48 @@ table.S-table td a{
     display: block;
     width: 100%;
     height: 100%;
-
+    color: white;
+    text-decoration: none;
+    font-family: 'Sorts Mill Goudy', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+table.S-table td #adif {
+    justify-content: flex-start;
+    padding-left: 1vw;
+}
+
+table.S-table td a:hover{
+    background-color: rgb(79, 150, 79);
+}
+
 
 /* Booking 3 */
 
 main.booking3 {
     background-color: rgba(204, 255, 221, 0.293);
 }
+.Day-Title {
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    padding: 3rem 0;
+}
 
+.Booking-Form {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    margin: auto;
+}
 
 .Booking-Form form {
     display: flex;
     flex-flow: row wrap;
-    width: 80%;
-    margin: 0 auto;
+    width: 45%;
     background-color:rgba(115, 130, 115, 0.186);
     padding: 1rem;
     border-radius: 1rem;
@@ -898,5 +938,40 @@ main.booking3 {
     border: solid rgb(115, 130, 115) 1px;
 }
 
+.buttons {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    padding: 2rem 0;
+}
+
+#SeeMore {
+    width: 30%;
+    background-color: #326c37;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 auto 1rem auto;
+
+}
+.booking3 [type=submit] {
+    width: 30%;
+    background-color: #326c37;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    margin: 0 auto 1rem auto;
+}
 
 
