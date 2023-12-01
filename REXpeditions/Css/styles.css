@@ -23,9 +23,6 @@ main.index {
     min-height: 60vh;
     width: 100%;
     margin: auto;
-
-
-    
 }
 
 .Premium-Tours h2{
@@ -75,10 +72,10 @@ main.index {
     background-color: #7FD9FC;
     padding: 1rem 2rem;
     border-radius: .8rem;
-    border: solid black 1px;
     text-decoration: none;
     color: black;
     font-size: 1.5rem;
+    font-weight: bold;
 }
 
 /* basic tours index */
@@ -93,6 +90,7 @@ main.index {
     position: relative;
     margin: 0 auto;
     max-width: 80%;
+    font-family: 'Sorts Mill Goudy', serif;
 }
 .slides-B {
     display: flex;
@@ -101,9 +99,7 @@ main.index {
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     position: relative;
-    
 }
-
 .B-Tour {
     max-width: 100%;
     flex:1 0 100%;
@@ -120,9 +116,10 @@ main.index {
     width: 48%;
     display: flex;
     flex-flow: row wrap;
-    align-items: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    padding: 2rem;
 }
-
 .B-Tour img {
     width: 48%;
     height: 100%;
@@ -132,19 +129,21 @@ main.index {
 .B-Tour h3 {
     width: 100%;
     font-size: 2rem;
+    margin-bottom: 2rem;
 }
 .B-Tour p {
     font-size: 1.5rem;
+    margin-bottom: 2rem;
 }
 .B-Tour a {
     background-color: #7FD9FC;
-    padding: 1rem;
+    padding: 1rem 3rem;
     border-radius: 1rem;
     text-decoration: none;
     color: black;
     font-weight: bold;
-    font-size: 1.2rem;
-    margin-left: 80%;
+    font-size: 1.5rem;
+    margin-left: 70%;
 }
 .B-Nav {
     width: 17.2rem;
@@ -155,12 +154,12 @@ main.index {
     position: relative;
 }
 .B-Nav a {
-    background-color: gray;
+    background-color: rgb(48, 102, 127);
     padding: 1rem;
     border-radius: 50%;
 }
 .B-Nav a:hover {
-    background-color: #326c37;
+    background-color: rgb(94, 152, 180);
 }
 
 .B-Nav a:active {
@@ -186,6 +185,7 @@ main.index {
     display: flex;
     width: 80%;
     position: relative;
+    font-size: 1.5rem;
 }
 .Quote img {
     object-fit: cover;
@@ -321,6 +321,7 @@ main.index {
     object-fit: cover;
     width: 100%;
     border-radius: 1rem;
+    height: 25rem;
 }
 .Staff p {
     width: 100%;
@@ -898,9 +899,11 @@ table.S-table td a:hover{
 
 /* Booking 3 */
 
-main.booking3 {
-    background-color: rgba(204, 255, 221, 0.293);
+body.bodybooking3 {
+    background-color: #305239;
+    color: white;
 }
+
 .Day-Title {
     width: 100%;
     font-size: 3rem;
@@ -920,8 +923,10 @@ main.booking3 {
 .Booking-Form form {
     display: flex;
     flex-flow: row wrap;
+    align-items: flex-start;
+    align-content: flex-start;
     width: 45%;
-    background-color:rgba(115, 130, 115, 0.186);
+    background-color: rgb(44, 122, 44);
     padding: 1rem;
     border-radius: 1rem;
 }
@@ -930,25 +935,33 @@ main.booking3 {
     width: 100%;
     font-size: 1.5rem;
 }
-#Adults, #Kids  {
+#Adults, #Kids,  input  {
     width: 20rem;
     font-size: 1rem;
     padding: .3rem;
     border-radius: .3rem;
-    border: solid rgb(115, 130, 115) 1px;
+    border: solid rgb(0, 0, 0) 1px;
+    background-color: #aceaab;
 }
-
+.Booking-Form [action=NameOfPeople] {
+    display: flex;
+    flex-flow: column wrap;
+}
+[action=NameOfPeople] input {
+    margin: 1rem 0;
+}
 .buttons {
     width: 80%;
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
     padding: 2rem 0;
+    margin: auto;
 }
 
-#SeeMore {
+.SeeMore {
     width: 30%;
-    background-color: #326c37;
+    background-color: #61b767;
     padding: 1rem 2rem;
     border-radius: 1rem;
     display: flex;
@@ -960,9 +973,54 @@ main.booking3 {
     margin: 0 auto 1rem auto;
 
 }
-.booking3 [type=submit] {
-    width: 30%;
-    background-color: #326c37;
+
+/* booking4  */
+
+.bodybooking4 {
+    background-color: rgba(204, 255, 221, 0.293);
+}
+
+.booking4 h2 {
+    width: 100%;
+    font-size: 3rem;
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+    padding: 3rem 0;
+}
+main.booking4 {
+    width: 100%;
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    margin: auto;
+}
+.booking4 .contentdiv {
+    width: 80%;
+    display: flex;
+    flex-flow: row wrap;
+}
+ul.Tours, .Price {
+    width: 50%;
+    list-style: none;
+}
+.Price li, ul.Tours li{
+    font-size: 2rem;
+}
+.Price li::after, ul.Tours li::after{
+    content: "";
+    background-color: rgb(75, 113, 75);
+    padding: 1px 0;
+    display: block;
+    width: 100%;
+    margin-bottom: 3rem;
+}
+.Price li {
+    text-align: right;
+}
+
+.booking4 button{
+    width: 20%;
+    background-color: #61b767;
     padding: 1rem 2rem;
     border-radius: 1rem;
     display: flex;
@@ -974,4 +1032,19 @@ main.booking3 {
     margin: 0 auto 1rem auto;
 }
 
-
+.booking4 p {
+    width: 50%;
+    font-size: 2rem;
+    text-align: right;
+    display: grid;
+    justify-content: end
+}
+.booking4 p::after {
+    content: "";
+    background-color: rgb(75, 113, 75);
+    padding: 1px 0;
+    display: block;
+    align-self: end;
+    width: 100%;
+    margin-bottom: 3rem;
+}
