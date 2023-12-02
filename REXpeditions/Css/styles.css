@@ -2,7 +2,7 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-    scroll-behavior: smooth
+
 }
 /* fonts import */
 
@@ -96,9 +96,9 @@ main.index {
     display: flex;
     overflow-x: hidden;
     aspect-ratio: 31/10;
-    scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
     position: relative;
+    scroll-snap-type: x mandatory;
 }
 .B-Tour {
     max-width: 100%;
