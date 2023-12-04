@@ -2,7 +2,7 @@
 /* Footer part  */
 
 footer img[src$=".svg"]{ /*Selects every img with a src that ends in .svg*/
-    height: 1.8rem;
+    height:clamp(1rem, 2vw, 1.8rem);
 }
 footer {
     overflow: auto;
@@ -18,28 +18,35 @@ footer ul {
     list-style: none;
 }
 footer li {
-    font-size: 1.5rem;
+    font-size: clamp(.8rem, 2vw, 1.5rem);
 }
 footer h4 {
-    font-size: 2rem;
+    font-size: clamp(1.2rem, 5vw, 2rem);
 }
 footer a {
     color: white;
     text-decoration: none;
 }
+
 footer #FB {
+    display: block;
     padding: 2rem 3rem;
     background-color: rgb(162, 220, 75);
     border-radius: 1rem;
     color: black;
     font-size: 2rem;
 }
+@media screen and (max-width: 600px){
+    footer #FB {
+        display: none;
+    }
+}
 footer img[src$=".png"] {
-    height: 10rem;
+    width:clamp(5rem, 10vw, 10rem);
 }
 /* Nav part  */
 
-.nav2 {
+.nav2 { 
     background-color: #285C4D;
     height: 7vh;
     display: flex;
@@ -51,19 +58,24 @@ footer img[src$=".png"] {
 }
 .nav2 ul {
     margin: auto;
-    width: 80%;
+    width: 80vw;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: space-around;
     list-style: none;
 }
+@media screen and (max-width: 600px) {
+    .nav2 ul {
+        width: 95vw;
+    }
+}
 .nav2 a {
     text-decoration: none;
     color: white;
 }
 .nav2 li {
-    font-size: 1.5rem;
+    font-size: clamp(1.1rem, 2vw, 1.5rem);
 }
 .nav2 .DropDownC {
     font-size: large;
@@ -94,7 +106,7 @@ footer img[src$=".png"] {
 }
 /* Header part home */
 
-.HomeHeader {
+.HomeHeader {/* hi, use dvh for the height  */
     width: 100%;
     min-height: 93vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner.jpg);

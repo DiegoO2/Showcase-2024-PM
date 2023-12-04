@@ -941,7 +941,7 @@ body.bodybooking3 {
     width: 100%;
     font-size: 1.5rem;
 }
-#Adults, #Kids,  input  {
+#Adults, #Kids, [placeholder="First Name & Last Name"]  {
     width: 20rem;
     font-size: 1rem;
     padding: .3rem;
@@ -954,7 +954,7 @@ body.bodybooking3 {
     flex-flow: column wrap;
 }
 [action=NameOfPeople] input {
-    margin: 1rem 0;
+    margin-bottom: 1rem;
 }
 .buttons {
     width: 80%;
