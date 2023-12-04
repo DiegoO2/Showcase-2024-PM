@@ -2,12 +2,12 @@
 /* Footer part  */
 
 footer img[src$=".svg"]{ /*Selects every img with a src that ends in .svg*/
-    height:clamp(1rem, 2vw, 1.8rem);
+    height:clamp(1.3rem, 2vw, 1.8rem);
 }
 footer {
-    overflow: auto;
+    overflow: hidden;
     position: relative;
-    max-height: 25vh;
+    height: clamp(7rem, 15vw, 11rem);
     background-color: #027200;
     display: flex;
     justify-content: space-around;
@@ -18,10 +18,10 @@ footer ul {
     list-style: none;
 }
 footer li {
-    font-size: clamp(.8rem, 2vw, 1.5rem);
+    font-size: clamp(1rem, 2vw, 1.5rem);
 }
 footer h4 {
-    font-size: clamp(1.2rem, 5vw, 2rem);
+    font-size: clamp(1.4rem, 3vw, 2rem);
 }
 footer a {
     color: white;
@@ -30,19 +30,19 @@ footer a {
 
 footer #FB {
     display: block;
-    padding: 2rem 3rem;
+    padding: 1.6rem 1rem;
     background-color: rgb(162, 220, 75);
     border-radius: 1rem;
     color: black;
     font-size: 2rem;
 }
-@media screen and (max-width: 600px){
+@media only screen and (max-width: 600px){
     footer #FB {
         display: none;
     }
 }
 footer img[src$=".png"] {
-    width:clamp(5rem, 10vw, 10rem);
+    width:clamp(6rem, 13vw, 10rem);
 }
 /* Nav part  */
 
@@ -65,7 +65,7 @@ footer img[src$=".png"] {
     justify-content: space-around;
     list-style: none;
 }
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 600px) {
     .nav2 ul {
         width: 95vw;
     }
@@ -108,7 +108,7 @@ footer img[src$=".png"] {
 
 .HomeHeader {/* hi, use dvh for the height  */
     width: 100%;
-    min-height: 93vh;
+    min-height: 93dvh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner.jpg);
     background-size: cover;
     color: white;
@@ -127,16 +127,27 @@ footer img[src$=".png"] {
     width: 50%;
     margin: auto;
 }
+@media only screen and (max-width: 1200px) {
+    .home-w {
+        width: 70%;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .home-w {
+        width: 90%;
+    }
+}
+
 .HomeHeader h1 {
     font-family: 'Luckiest Guy', cursive;
-    font-size: 9rem;
+    font-size: clamp(4rem, 10vw, 9rem);
     width: 100%;
     text-align: center;
 }
 
 .HomeHeader p {
     width: 100%;
-    font-size: 1.5rem;
+    font-size: clamp(.5rem, 3vw, 1.5rem);
 }
 
 .HomeHeader a {
@@ -144,7 +155,7 @@ footer img[src$=".png"] {
     padding: 1rem 5%;
     border-radius: 1rem;
     text-decoration: none;
-    font-size: 2rem;
+    font-size: clamp(.5rem, 3vw, 2rem);
     color: black;
     margin: 2rem 0; 
 
@@ -163,5 +174,6 @@ footer img[src$=".png"] {
     justify-content: center;
 }
 .Nheader h1 { 
-    font-size: 6rem;
+    font-size: clamp(4.5rem, 8vw, 6rem);
+    text-align: center;
 }

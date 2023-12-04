@@ -2,7 +2,6 @@
     box-sizing: border-box;
     padding: 0;
     margin: 0;
-
 }
 /* fonts import */
 
@@ -29,6 +28,7 @@ main.index {
     min-height: 60vh;
     width: 100%;
     margin: auto;
+
 }
 
 .Premium-Tours h2{
@@ -264,7 +264,7 @@ main.index {
     display: flex;
     justify-content: center;
     align-items: stretch;
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto 2rem auto;
     font-family: 'Sorts Mill Goudy', serif;
 }
@@ -304,6 +304,19 @@ main.index {
     margin-top: 2rem;
 
 }
+@media only screen and (max-width: 1200px) {
+    .WhatIs{
+        flex-direction: column-reverse;
+        width: 95%;
+    }
+    .WhatIs-L, .WhatIs img[src$=".jpg"] {
+        width: 100%;
+    }
+    .WhatIs-L h2 {
+        margin-bottom: 3rem;
+    }
+}
+
 
 /* our staff about us */
 
@@ -347,6 +360,15 @@ main.Tours {
     margin-right: 10%;
 }
 
+@media only screen and (max-width: 1200px) {
+    .Our-Staff{
+        width: 95%;
+    }
+    .Staff {
+        width: 40%;
+    }
+}
+
 /* premium tours tours no touch this part, I did good here it is semi web responsable*/
 
 .PremiumTours {
@@ -380,7 +402,7 @@ main.Tours {
 }
 .PremiumTours h3 {
     width: 100%;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
 }
 .PremiumTours h4 {
     width: 100%;
@@ -417,6 +439,21 @@ main.Tours {
     vertical-align: top;
 }
 
+@media only screen and (max-width: 1600px) {
+    .PremiumTours{
+        flex-direction: column;
+    }
+    .PTL, .PremiumTours img[src$=".jpg"] {
+        width: 100%;
+    }
+    #baby {
+        flex-direction: column-reverse;
+    }
+    .PremiumTours::after, .PremiumTours::before{
+        display: none;
+    }
+}
+
 /* basic tours tours */
 
 .BasicTours {
@@ -443,7 +480,7 @@ main.Tours {
 }
 .BasicTours h3 {
     width: 100%;
-    font-size: 2.5rem;
+    font-size: clamp(2rem, 5vw, 2.5rem);
 }
 .BasicTours h4 {
     width: 100%;
@@ -475,8 +512,24 @@ main.Tours {
     text-decoration: none;
     margin: 0 auto 1rem auto;
 }
+@media only screen and (max-width: 1400px) {
+    .BasicTours{
+        flex-direction: column;
+    }
+    .BTL, .BasicTours img[src$=".jpg"] {
+        width: 100%;
+    }
+    #baby {
+        flex-direction: column-reverse;
+    }
+    .BasicTours::after, .BasicTours::before {
+        display: none;
+    }
+}
+
 
 /* Hunting tours  */
+
 #HTitle::before {
     content: "";
     background-color: rgb(75, 113, 75);
@@ -487,6 +540,7 @@ main.Tours {
 }
 #HTitle {
     text-align: center;
+    font-size: clamp(2rem, 5vw, 2.5rem);
 }
 .Hunting {
     position: relative;
@@ -535,6 +589,21 @@ main.Tours {
     margin-bottom: 1rem;
 
 }
+@media only screen and (max-width: 1400px) {
+    .Hunting{
+        flex-direction: column;
+    }
+    .HL, .Hunting img[src$=".jpg"] {
+        width: 100%;
+    }
+    #car {
+        margin: 0 auto;
+    }
+    .BasicTours #carB {
+        margin: 0 auto;
+    }
+}
+
 
 /* Contact page css */
 
@@ -644,21 +713,6 @@ main.hunting {
 
 }
 
-/* .T-numbers {
-    background-color: #E1FAFF;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    font-size: 10rem;
-}
-.T-dates {
-    display: flex;
-    list-style: none;
-    font-size: 3rem;
-    justify-content: space-between;
-
-} */
 
 /* Hunting extra hunting */
 
@@ -716,6 +770,19 @@ main.hunting {
     text-decoration: none;
     margin: 1rem auto 0 auto;
 }
+
+@media only screen and (max-width: 1200px) {
+    .HL2{
+        flex-direction: column;
+    }
+    .HL2 img, .HL2 p {
+        width: 100%;
+    }
+    .HL2 a {
+        width: 80%;
+    }
+}
+
 
 /* calendar booking  */
 
