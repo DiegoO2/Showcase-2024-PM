@@ -28,16 +28,17 @@ main.index {
     min-height: 60vh;
     width: 100%;
     margin: auto;
-
 }
-
 .Premium-Tours h2{
     font-size: 3rem;
     text-align: center;
-    padding: 3rem 0;
+    padding-top: 3rem;
 }
-
 .Wrapper-P {
+    display: flex;
+    flex-flow: row wrap;
+}
+.slides-P {
     margin: auto;
     flex-flow: row wrap;
     position: relative;
@@ -50,13 +51,12 @@ main.index {
 
 }
 .P-Tour img {
-    margin-top: 1rem;
+    margin-top: 3rem;
     width: 100%;
     object-fit: cover;
 }
 .P-Tour {
     width: 30%;
-    /* background-color: #C6C89B; */
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -70,7 +70,7 @@ main.index {
 }
 .P-Tour p {
     width: 100%;
-    text-align: justify;
+    text-align: center;
     font-size: large;
     margin:1rem 0;
 }
@@ -83,36 +83,73 @@ main.index {
     font-size: 1.5rem;
     font-weight: bold;
 }
+.P-Nav {
+    display: none;
+}
+
+@media only screen and (max-width: 1300px) {
+    .Wrapper-P {
+        max-width: 80%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: center;
+    }
+    .slides-P {
+        width: 100%;
+        overflow-x: hidden;
+        scroll-behavior: smooth;
+        position: relative;
+        scroll-snap-type: x mandatory;
+        flex-flow: row nowrap;
+
+    }
+    .P-Tour {
+        width: 100%;
+        scroll-snap-align: start;
+        flex-shrink: 0;
+    }
+    .P-Nav {
+        display: flex;
+        column-gap: 1rem;
+    }
+    .P-Nav a {
+        margin-top: 1rem;
+        background-color: rgb(48, 102, 127);
+        padding: 1rem;
+        border-radius: 50%;
+    }
+}
 
 /* basic tours index */
 
 .Basic-Tours h2{
     font-size: 3rem;
     text-align: center;
-    padding: 3rem 0;
+    padding-top: 3rem;
 }
 
 .Wrapper-B {
     position: relative;
     margin: 0 auto;
     max-width: 80%;
+    display: flex;
     font-family: 'Sorts Mill Goudy', serif;
+    flex-flow: row wrap;
+    justify-content: center;
 }
 .slides-B {
     display: flex;
     overflow-x: hidden;
-    aspect-ratio: 31/10;
     scroll-behavior: smooth;
     position: relative;
     scroll-snap-type: x mandatory;
 }
 .B-Tour {
-    max-width: 100%;
-    flex:1 0 100%;
+    width: 100%;
+    flex-shrink: 0;
     scroll-snap-align: start;
     display: flex;
     flex-flow: row wrap;
-    margin: auto;
     background-color: #E1FAFF;
     justify-content: space-between;
 }
@@ -120,18 +157,24 @@ main.index {
 .B-Tour-L {
     margin:  0 auto;
     width: 48%;
-    display: flex;
-    flex-flow: row wrap;
+    display: grid;
     align-items: flex-start;
     align-content: flex-start;
     padding: 2rem;
 }
 .B-Tour img {
-    width: 48%;
-    height: 100%;
+    width: 50%;
     object-fit: contain;
 }
+.B-Tour .white {
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+}
+.B-Tour .background {
+    background-color: rgba(204, 255, 221, 0.293);
+    padding: 1.5rem;
 
+}
 .B-Tour h3 {
     width: 100%;
     font-size: 2rem;
@@ -149,17 +192,14 @@ main.index {
     color: black;
     font-weight: bold;
     font-size: 1.5rem;
-    margin-left: 70%;
+    justify-self: flex-end;
 }
 .B-Nav {
-    width: 17.2rem;
     display: flex;
-    margin: auto;
     column-gap: 1rem;
-    z-index: 2;
-    position: relative;
 }
 .B-Nav a {
+    margin-top: 1rem;
     background-color: rgb(48, 102, 127);
     padding: 1rem;
     border-radius: 50%;
@@ -171,16 +211,27 @@ main.index {
 .B-Nav a:active {
     background-color: #232323;
 }
+@media only screen and (max-width: 1300px) {
+    .B-Tour {
+        flex-flow: column nowrap;
+    }
+    .B-Tour img, .B-Tour-L {
+        width: 100%;
+    }
+    .B-Tour-L {
+        padding: 1rem;
+    }
+
+}
+
 
 /*  EXTRA quote and contact index  */
 
 .Extra {
-    position: relative;
     display: flex;
     flex-flow: row  wrap;
     justify-content: center;
-    align-items: stretch;
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
     font-family: 'Sorts Mill Goudy', serif;
     padding: 6rem 0;
@@ -189,8 +240,7 @@ main.index {
 
 .Quote {
     display: flex;
-    width: 80%;
-    position: relative;
+    width: 100%;
     font-size: 1.5rem;
 }
 .Quote img {
@@ -218,7 +268,7 @@ main.index {
     text-align: right;
 }
 .Contact {
-    width: 80%;
+    width: 100%;
     display: flex;
 }
 .Contact img {
@@ -249,8 +299,36 @@ main.index {
     color: rgb(255, 255, 255);
     text-decoration: none;
     margin-top: 2rem;
-
 }
+@media only screen and (max-width: 1200px) {
+    .Contact {
+        flex-direction: column;
+    }
+    .Contact img, .Contact-L {
+        width: 100%;
+    }
+    .Contact img {
+        margin-top: 2rem;
+    }
+    .Quote img {
+        display: none;
+    }
+    .Quote-L {
+        width: 100%;
+        padding: 0;
+    }
+    .Quote-L q {
+        text-align: left;
+        font-size: 1rem;
+    } 
+    .Contact-L a {
+        width: 100%;
+    }
+    .Contact-L h2{
+        margin-top: 2rem;
+    }
+}
+
 
 /* what is about us  */
 
@@ -307,10 +385,12 @@ main.index {
 @media only screen and (max-width: 1200px) {
     .WhatIs{
         flex-direction: column-reverse;
-        width: 95%;
+        width: 80%;
     }
     .WhatIs-L, .WhatIs img[src$=".jpg"] {
         width: 100%;
+        padding: 3rem 0;
+
     }
     .WhatIs-L h2 {
         margin-bottom: 3rem;
@@ -362,10 +442,11 @@ main.Tours {
 
 @media only screen and (max-width: 1200px) {
     .Our-Staff{
-        width: 95%;
+        width: 80%;
     }
     .Staff {
-        width: 40%;
+        width: 100%;
+        margin-bottom: 2rem;
     }
 }
 
@@ -452,6 +533,9 @@ main.Tours {
     .PremiumTours::after, .PremiumTours::before{
         display: none;
     }
+    .PTL {
+        padding: 2rem 0;
+    }
 }
 
 /* basic tours tours */
@@ -462,7 +546,7 @@ main.Tours {
     justify-content: center;
     align-items: stretch;
     margin-bottom: 2rem;
-    max-width: 80%;
+    width: 80%;
     margin: 0 auto 2rem auto;
     font-family: 'Sorts Mill Goudy', serif;
 }
@@ -524,6 +608,18 @@ main.Tours {
     }
     .BasicTours::after, .BasicTours::before {
         display: none;
+    }
+    .BasicTours a {
+        width: 100%;
+    }
+    #car {
+        margin: 0 auto;
+    }
+    .BasicTours #carB {
+        margin: 0 auto;
+    }
+    .BTL {
+        padding: 2rem 0;
     }
 }
 
@@ -596,12 +692,10 @@ main.Tours {
     .HL, .Hunting img[src$=".jpg"] {
         width: 100%;
     }
-    #car {
-        margin: 0 auto;
+    .HL {
+        padding: 2rem 0;
     }
-    .BasicTours #carB {
-        margin: 0 auto;
-    }
+
 }
 
 
@@ -800,7 +894,7 @@ main.hunting {
 }
 .booking h2 {
     width: 100%;
-    font-size: 4rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     margin: 3rem;
     text-align: center;
 }
@@ -839,7 +933,7 @@ main.hunting {
     font-size: 1.5rem;
 }
 .Date a {
-    margin: 0 1rem;
+    margin: 0 1vw;
     text-decoration: none;
     color: white;
     font-size: 3rem;
@@ -892,20 +986,6 @@ main.hunting {
     border: gray solid 1px;
     background-color: #4d4d4d;
 }
-
-/* Booking 2 */
-.booking2 {
-    background-color: #305239;
-    padding: 3rem 0;
-    color: white;
-    
-}
-.booking2 h2 {
-    width: 100%;
-    font-size: 4rem;
-    text-align: center;
-    font-family: 'Sorts Mill Goudy', serif;
-}
 .GoBackArrow {
     position: absolute;
     width: 10%;
@@ -920,8 +1000,39 @@ main.hunting {
 .GoBackArrow a img{
     width: 4rem;
 }
-table.S-table {
+
+@media only screen and (max-width: 600px) {
+    .Weekdays div {
+        font-size: 1.3rem;
+    }
+    .GoBackArrow a img{
+        width: 2rem;
+    }
+    .Date div h3 {
+        font-size: 3rem;
+    }
+}
+
+
+/* Booking 2 */
+.booking2 {
+    background-color: #305239;
+    padding: 3rem 0;
+    color: white;
+    
+}
+.booking2 h2 {
+    width: 100%;
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    text-align: center;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+.Table-wrapper {
     width: 80%;
+    margin: 0 auto;
+}
+table.S-table {
+    width: 100%;
     margin: auto;
     margin-top: 3rem;
     font-family: 'Nova Square', sans-serif;
@@ -931,21 +1042,22 @@ table.S-table {
 }
 table.S-table th{
     font-family: 'Nova Square', sans-serif;
-    font-size: 3vw;
+    font-size: clamp(.7rem, 2vw, 2rem);
     border: #232323 solid 3px;
     background-color: #3aab59;
-    height: 6vh;
-    width: 2vw;
+    padding: .2rem;
+    height: 2vw;
+    width: 6vh;
 
 }
 table.S-table td{
-    font-size: 3vw;
+    font-size: clamp(1rem, 3vw, 3rem);
     font-family: 'Nova Square', sans-serif;
     font-weight: lighter;
     text-align: center;
     background-color: #232323;
     width: 2vw;
-    height: 6vh;
+    height: 3vh;
 
 }
 table.S-table td a{
@@ -979,7 +1091,7 @@ body.bodybooking3 {
 
 .Day-Title {
     width: 100%;
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     text-align: center;
     font-family: 'Sorts Mill Goudy', serif;
     padding: 3rem 0;
@@ -1009,7 +1121,7 @@ body.bodybooking3 {
     font-size: 1.5rem;
 }
 #Adults, #Kids, [placeholder="First Name & Last Name"]  {
-    width: 20rem;
+    width: 50%;
     font-size: 1rem;
     padding: .3rem;
     border-radius: .3rem;
@@ -1033,9 +1145,9 @@ body.bodybooking3 {
 }
 
 .SeeMore {
-    width: 30%;
+    width: 45%;
     background-color: #61b767;
-    padding: 1rem 2rem;
+    padding: 1rem;
     border-radius: 1rem;
     display: flex;
     justify-content: center;
@@ -1043,8 +1155,19 @@ body.bodybooking3 {
     font-size: 2rem;
     color: rgb(255, 255, 255);
     text-decoration: none;
-    margin: 0 auto 1rem auto;
+    margin-bottom: 1rem;
+}
+.SeeMore:hover {
+    background-color: #97d69b;
+}
 
+@media only screen and (max-width: 1300px) {
+    #Adults, #Kids, [placeholder="First Name & Last Name"]  {
+        width: 100%;
+    }
+    .SeeMore {
+        font-size: 1.8rem;
+    }
 }
 
 /* booking4  */
@@ -1055,7 +1178,7 @@ body.bodybooking3 {
 
 .booking4 h2 {
     width: 100%;
-    font-size: 3rem;
+    font-size: clamp(2.5rem, 5vw, 4rem);
     text-align: center;
     font-family: 'Sorts Mill Goudy', serif;
     padding: 3rem 0;
