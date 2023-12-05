@@ -112,6 +112,10 @@ main.index {
         display: flex;
         column-gap: 1rem;
     }
+    .P-Tour img {
+        width: 50%;
+        object-fit: cover;
+    }
     .P-Nav a {
         margin-top: 1rem;
         background-color: rgb(48, 102, 127);
@@ -119,6 +123,12 @@ main.index {
         border-radius: 50%;
     }
 }
+@media only screen and (max-width: 700px) {
+    .P-Tour img {
+        width: 100%;
+    }
+}
+
 
 /* basic tours index */
 
@@ -216,12 +226,18 @@ main.index {
 .B-Nav a:active {
     background-color: #232323;
 }
+
+/* details to solve here to the tables/small computers size in the carrusel */
+
 @media only screen and (max-width: 1300px) {
     .B-Tour {
         flex-flow: column nowrap;
         justify-content: start;
     }
-    .B-Tour img, .B-Tour-L {
+    .B-Tour-L {
+        width: 100%;
+    }
+    .B-Tour img {
         width: 100%;
     }
     .B-Tour-L {
@@ -236,8 +252,6 @@ main.index {
     .B-Nav a {
         justify-self: flex-end;
     }
-    
-    
 }
 
 
