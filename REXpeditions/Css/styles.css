@@ -927,7 +927,9 @@ main.hunting {
         width: 100%;
     }
 }
+@media only screen and (max-width: 600px) {
 
+}
 
 /* calendar booking  */
 
