@@ -1,5 +1,8 @@
-function myFunction() {
-    var popup = document.getElementById("butPopUp");
-    popup.classList.toggle("show");
-  }
-  
+
+function openForm() {
+  document.getElementById("buyPopUp").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("buyPopUp").style.display = "none";
+}

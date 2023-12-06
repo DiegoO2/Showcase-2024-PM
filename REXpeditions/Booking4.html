@@ -14,7 +14,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="Jurassic-Images/JurassicIcon.png">
     <script src="js/cartExp.js"></script>
-
 </head>
 
 <body class="bodybooking4">
@@ -60,8 +59,8 @@
     <main class="booking4">
         <h2>Total Price</h2>
         <div class="contentdiv">
-            <div class="cartTotal"></div>
-            <div class="cartItemCount"></div>
+            <!-- <div class="cartTotal"></div>
+            <div class="cartItemCount"></div> -->
             <!-- <ul class="Tours">
                 <li>T-rex tour x3</li>
                 <li>Baby dinosaurs x3</li>
@@ -75,15 +74,32 @@
                 <li>$300,999,990.99</li> -->
             </ul>
             <!--Go back arrow. JS involved?-->
-            <button id="" onclick="myFunction()">Buy Tours</button> <!-- pop up will appear using JS, phone and pin to buy-->
+            <button class="open-button" onclick="openForm()">Buy Tours</button>
+            <!-- pop up will appear using JS, phone and pin to buy-->
             <!-- <p>$1,234,030,064.99</p> -->
-            <span id="buyPopUp">A Simple Popup!</span>
+            <div class="form-popup" id="buyPopUp">
+                <form action="" class="BuyForm">
+                    <h1>Buy</h1>
+                    <div class="phone">
+                        <label for="phone"><b>Phone Number</b></label>
+                        <input type="text" placeholder="Enter your Phone Number" name="phone" required>
+                    </div>
+                    <div class="PIN">
+                        <label for="PIN"><b>PIN Code</b></label>
+                        <input type="number" placeholder="Enter your PIN Code" name="PIN" required>
+                    </div>
+                    <div class="BuyB">
+                        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                        <button type="submit" class="btn">Buy!</button>
+                    </div>
+                </form>
+            </div>
         </div>
         <div class="GoBackArrow">
             <a href="Booking3.html"><img src="Jurassic-Images/GoBackArrow.svg" alt="Go Back Arrow Icon"></a>
         </div>
-
     </main>
+    <script src="js/PopUp.js"></script>
 </body>
 
 </html>
