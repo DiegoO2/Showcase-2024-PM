@@ -313,7 +313,7 @@ main.index {
     align-content: center;
 }
 .Contact-L h2{
-    font-size: 2rem;
+    font-size: 4rem;
     width: 100%;    
     text-align: center;
 }
@@ -353,9 +353,11 @@ main.index {
     } 
     .Contact-L a {
         width: 100%;
+        font-size: 1.5rem;
     }
     .Contact-L h2{
         margin-top: 2rem;
+        font-size: 2rem;
     }
 }
 
@@ -410,7 +412,6 @@ main.index {
     color: rgb(255, 255, 255);
     text-decoration: none;
     margin-top: 2rem;
-
 }
 @media only screen and (max-width: 1200px) {
     .WhatIs{
@@ -419,12 +420,18 @@ main.index {
     }
     .WhatIs-L, .WhatIs img[src$=".jpg"] {
         width: 100%;
-        padding: 3rem 0;
-
+        padding: 1rem 0;
     }
+    .WhatIs-L p {
+        font-size: 1.1rem
+    }    
     .WhatIs-L h2 {
-        margin-bottom: 3rem;
+        margin-bottom: 1rem;
     }
+    .WhatIs-L a {
+        font-size: 1.5rem;
+    }
+    
 }
 
 
@@ -436,7 +443,7 @@ main.index {
     flex-flow: row wrap;
     align-items: stretch;
     width: 80%;
-    margin: 2rem auto  auto;
+    margin: 2rem auto auto;
     font-family: 'Sorts Mill Goudy', serif;
     justify-content: space-between;
     column-gap: 20%;
@@ -473,10 +480,12 @@ main.Tours {
 @media only screen and (max-width: 1200px) {
     .Our-Staff{
         width: 80%;
+        margin: 1rem auto auto;
+
     }
     .Staff {
         width: 100%;
-        margin-bottom: 2rem;
+        margin-bottom: 6rem;
     }
 }
 
@@ -868,7 +877,7 @@ main.hunting {
     flex-flow: row wrap;
     justify-content: center;
     align-items: stretch;
-    max-width: 100%;
+    width: 100%;
     font-family: 'Sorts Mill Goudy', serif;
 }
 .HL2 img {
@@ -879,6 +888,7 @@ main.hunting {
     padding: 2rem;
     width: 50%;
     font-size: 1.5rem;
+    text-align: justify;
 }
 
 .HL2 a {
@@ -900,10 +910,20 @@ main.hunting {
         flex-direction: column;
     }
     .HL2 img, .HL2 p {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
+        padding: 0;
+        font-size: 1.1rem;
+    }
+    .HL2 img{
+        margin: 1rem auto;
     }
     .HL2 a {
         width: 80%;
+        margin: 0 auto;
+    }
+    .Hunting-W {
+        width: 100%;
     }
 }
 
@@ -937,11 +957,12 @@ main.hunting {
 .Date {
     background-color: #3aab59;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     height: 20%;
 }
-.Date div {
+.Date div.Dtitle {
+    width: 100%;
     margin: 0 2rem;
     display: flex;
     flex-flow: row wrap;
@@ -956,15 +977,14 @@ main.hunting {
 .Date div p {
     width: 100%;
     text-align: center;
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-family: 'Work Sans', sans-serif;
-
 }
-.Date a {
-    margin: 0 1vw;
+.Date .PreArrow,  .NextArrow {
     text-decoration: none;
     color: white;
     font-size: 3rem;
+    padding: 1rem;
 }
 .Weekdays {
     background-color: #305239;
@@ -1036,8 +1056,15 @@ main.hunting {
         width: 2rem;
     }
     .Date div h3 {
-        font-size: 3rem;
+        font-size: 2.5rem;
     }
+    .Date div p {
+        font-size: 1.5rem;
+    }
+    .Calendar {
+        height: 35rem;
+    }
+    
 }
 
 

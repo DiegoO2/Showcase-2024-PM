@@ -1,54 +1,68 @@
 const date = new Date();
 
-date.setDate(1);
+const renderCalendar = () => {
 
-const monthDays = document.querySelector(".Days");
+    date.setDate(1);
 
-const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
+    const monthDays = document.querySelector(".Days");
 
-const preLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
+    const lastDay = new Date(date.getFullYear(), date.getMonth() + 1, 0).getDate();
 
-const firstDayIndex = date.getDay();
+    const preLastDay = new Date(date.getFullYear(), date.getMonth(), 0).getDate();
 
-const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1).getDay();
+    const firstDayIndex = date.getDay();
 
-const nextDays = 7 - lastDayIndex -1;
+    const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1).getDay();
 
-const month = [
-    "January",
-    "February",
-    "March",
-    "April",
-    "May",
-    "June",
-    "July",
-    "August",
-    "September",
-    "October",
-    "November",
-    "December",
-];
+    const nextDays = 7 - lastDayIndex; //i change something
 
-document.querySelector(".Date h3").innerHTML = month[date.getMonth()];
+    const month = [
+        "January",
+        "February",
+        "March",
+        "April",
+        "May",
+        "June",
+        "July",
+        "August",
+        "September",
+        "October",
+        "November",
+        "December",
+    ];
 
-document.querySelector(".Date p").innerHTML = date.toDateString();
+    document.querySelector(".Date h3").innerHTML = month[date.getMonth()];
 
-let days = "";
+    document.querySelector(".Date p").innerHTML = date.getFullYear();
 
-for (let x = firstDayIndex; x > 0; x-- ){
-    days += `<div class="Pre-D">${preLastDay - x + 1}</div>`;
-}
+    let days = "";
 
-for (let i = 1; i <= lastDay; i++){
-    if(i === new Date().getDate() && date.getMonth() === new Date.getMonth()){
-        days += `<div class="Today">${i}</div>`;
+    for (let x = firstDayIndex; x > 0; x--) {
+        days += `<div class="Pre-D">${preLastDay - x + 1}</div>`;
     }
-    days += `<div>${i}</div>`;
-    // x +=10  new x=x+10  https://www.youtube.com/watch?v=o1yMqPyYeAo 39.15
+
+    for (let i = 1; i <= lastDay; i++) {
+        if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
+            days += `<div class="Today">${i}</div>`;
+        }
+        else {
+            days += `<div>${i}</div>`;
+        }
+        // x +=10  new x=x+10  https://www.youtube.com/watch?v=o1yMqPyYeAo 39.15
+    }
+
+    for (let j = 1; j <= nextDays; j++) {
+        days += `<div class="Next-D">${j}</div>`;
+        monthDays.innerHTML = days;
+
+    }
+
 }
 
-for (let j = 1; j <= nextDays; j++){
-    days += `<div class="Next-D">${j}</div>`;
-    monthDays.innerHTML = days;
 
-}
+document.querySelector(".PreArrow").addEventListener("click", () => { date.setMonth(date.getMonth() - 1);renderCalendar(); });
+
+document.querySelector(".NextArrow").addEventListener("click", () => { date.setMonth(date.getMonth() + 1);renderCalendar(); });
+
+renderCalendar();
+

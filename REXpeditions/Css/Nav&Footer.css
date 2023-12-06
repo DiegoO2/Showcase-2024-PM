@@ -37,7 +37,7 @@ footer #FB {
     font-size: 2rem;
 }
 @media only screen and (max-width: 600px){
-    footer #FB {
+    footer #FB, footer ul:nth-child(3), footer ul:nth-child(4){
         display: none;
     }
 }
@@ -48,7 +48,7 @@ footer img[src$=".png"] {
 
 .nav2 { 
     background-color: #285C4D;
-    height: 7vh;
+    height: 7svh;
     display: flex;
 }
 .nav2 img[src$=".png"]{
@@ -67,7 +67,7 @@ footer img[src$=".png"] {
 }
 @media only screen and (max-width: 600px) {
     .nav2 ul {
-        width: 99vw;
+        width: 94svw;
         justify-content: space-between;
     }
 }
@@ -76,7 +76,7 @@ footer img[src$=".png"] {
     color: white;
 }
 .nav2 li {
-    font-size: clamp(1.1rem, 2vw, 1.5rem);
+    font-size: clamp(.95rem, 2vw, 1.5rem);
 }
 .nav2 .DropDownC {
     font-size: large;
@@ -109,7 +109,7 @@ footer img[src$=".png"] {
 
 .HomeHeader {/* hi, use dvh for the height  */
     width: 100%;
-    min-height: 93dvh;
+    min-height: 93svh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner.jpg);
     background-size: cover;
     color: white;
@@ -141,7 +141,7 @@ footer img[src$=".png"] {
 
 .HomeHeader h1 {
     font-family: 'Luckiest Guy', cursive;
-    font-size: clamp(5rem, 10vw, 9rem);
+    font-size: clamp(4rem, 10vw, 9rem);
     width: 100%;
     text-align: center;
 }
@@ -176,7 +176,7 @@ footer img[src$=".png"] {
     justify-content: center;
 }
 .Nheader h1 { 
-    font-size: clamp(3.5rem, 5vw, 5rem);
+    font-size: clamp(3rem, 5vw, 5rem);
     text-align: center;
     font-family: 'Libre Baskerville', serif;
 }
