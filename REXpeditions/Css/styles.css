@@ -831,15 +831,17 @@ main.hunting {
     margin: auto;
     margin-top: 3rem;
     font-family: 'Nova Square', sans-serif;
-
+    width: 80%;
 }
 .Hunting-W table th{
+    border: black solid 1px;
     font-family: 'Nova Square', sans-serif;
-    padding: 1vw;
+    width: 2rem;
     font-size: 8vw;
 }
 .Hunting-W table td{
     font-size: 3vw;
+    width: 10vh;
     font-family: 'Nova Square', sans-serif;
     font-weight: lighter;
     text-align: center;
@@ -1050,21 +1052,24 @@ main.hunting {
 
 @media only screen and (max-width: 600px) {
     .Weekdays div {
-        font-size: 1.3rem;
+        font-size: 1rem;
     }
     .GoBackArrow a img{
-        width: 2rem;
+        width: 1.8rem;
     }
     .Date div h3 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .Date div p {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
     .Calendar {
         height: 35rem;
     }
-    
+    .Date .PreArrow,  .NextArrow {
+        font-size: 2.5rem;
+        padding: .5rem;
+    }
 }
 
 
@@ -1297,4 +1302,9 @@ ul.Tours, .Price {
     align-self: end;
     width: 100%;
     margin-bottom: 3rem;
+}
+#buyPopUp {
+    display: none;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
 }

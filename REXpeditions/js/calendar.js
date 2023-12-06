@@ -1,4 +1,4 @@
-const date = new Date();
+const date = new Date(); 
 
 const renderCalendar = () => {
 
@@ -14,7 +14,7 @@ const renderCalendar = () => {
 
     const lastDayIndex = new Date(date.getFullYear(), date.getMonth() + 1).getDay();
 
-    const nextDays = 7 - lastDayIndex; //i change something
+    const nextDays = 7 - lastDayIndex; //I change something some error
 
     const month = [
         "January",
@@ -42,13 +42,13 @@ const renderCalendar = () => {
     }
 
     for (let i = 1; i <= lastDay; i++) {
-        if (i === new Date().getDate() && date.getMonth() === new Date().getMonth()) {
+        if (i === new Date().getDate() && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear()) {// I add here the year to the if
             days += `<div class="Today">${i}</div>`;
         }
         else {
             days += `<div>${i}</div>`;
         }
-        // x +=10  new x=x+10  https://www.youtube.com/watch?v=o1yMqPyYeAo 39.15
+        // x +=10  new x=x+10  
     }
 
     for (let j = 1; j <= nextDays; j++) {
