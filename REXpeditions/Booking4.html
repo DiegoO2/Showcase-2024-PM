@@ -59,9 +59,12 @@
     <main class="booking4">
         <h2>Total Price</h2>
         <div class="contentdiv">
+            <div id="cart">
+
+            </div>
             <!-- <div class="cartTotal"></div>
-            <div class="cartItemCount"></div> -->
-            <!-- <ul class="Tours">
+            <div class="cartItemCount"></div>
+            <ul class="Tours">
                 <li>T-rex tour x3</li>
                 <li>Baby dinosaurs x3</li>
                 <li>Hike the volcano x3</li>
@@ -71,33 +74,31 @@
                 <li>$300,999,990.99</li>
                 <li>$300,999,990.99</li>
                 <li>$300,999,990.99</li>
-                <li>$300,999,990.99</li> -->
-            </ul>
-            <!--Go back arrow. JS involved?-->
+                <li>$300,999,990.99</li>
+            </ul> -->
             <button class="open-button" onclick="openForm()">Buy Tours</button>
-            <!-- pop up will appear using JS, phone and pin to buy-->
             <!-- <p>$1,234,030,064.99</p> -->
-            <div class="form-popup" id="buyPopUp">
-                <form action="" class="BuyForm">
-                    <h1>Buy</h1>
-                    <div class="phone">
-                        <label for="phone"><b>Phone Number</b></label>
-                        <input type="text" placeholder="Enter your Phone Number" name="phone" required>
-                    </div>
-                    <div class="PIN">
-                        <label for="PIN"><b>PIN Code</b></label>
-                        <input type="number" placeholder="Enter your PIN Code" name="PIN" required>
-                    </div>
-                    <div class="BuyB">
-                        <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-                        <button type="submit" class="btn">Buy!</button>
-                    </div>
-                </form>
-            </div>
         </div>
         <div class="GoBackArrow">
             <a href="Booking3.html"><img src="Jurassic-Images/GoBackArrow.svg" alt="Go Back Arrow Icon"></a>
         </div>
+        <aside class="form-popup" id="buyPopUp">
+            <form action="" class="BuyForm">
+                <h1>Buy</h1>
+                <div class="phone">
+                    <label for="phone"><b>Phone Number</b></label>
+                    <input type="text" placeholder="Enter your Phone Number" name="phone" required>
+                </div>
+                <div class="PIN">
+                    <label for="PIN"><b>PIN Code</b></label>
+                    <input type="number" placeholder="Enter your PIN Code" name="PIN" required>
+                </div>
+                <div class="BuyB">
+                    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                    <button type="submit" class="btn">Buy!</button>
+                </div>
+            </form>
+        </aside>    
     </main>
     <script src="js/PopUp.js"></script>
 </body>

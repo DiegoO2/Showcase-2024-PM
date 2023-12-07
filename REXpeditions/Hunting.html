@@ -114,23 +114,8 @@
                 <img src="Jurassic-Images/Hunting.jpg" alt="Our hunting team">
                 <a onclick="openForm()">Reserve now</a>
         </section>
-        <div class="form-popup" id="buyPopUp">
-            <form action="" class="BuyForm">
-                <h1>Reserve</h1>
-                <div class="phone">
-                    <label for="phone"><b>Phone Number</b></label>
-                    <input type="text" placeholder="Enter your Phone Number" name="phone" required>
-                </div>
-                <div class="PIN">
-                    <label for="PIN"><b>PIN Code</b></label>
-                    <input type="number" placeholder="Enter your PIN Code" name="PIN" required>
-                </div>
-                <div class="BuyB">
-                    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
-                    <button type="submit" class="btn">Reserve!</button>
-                </div>
-            </form>
-        </div>
+        
+    
     </main>
     <footer>
         <img src="Jurassic-Images/JPLOGO.png" alt="Jurassic Park logo">
@@ -161,6 +146,25 @@
         </ul>
         <a href="Tours.html" id="FB">View Tours</a>
     </footer>
+
+    <aside class="form-popup" id="buyPopUp">
+        <form action="" class="BuyForm">
+            <h1>Buy</h1>
+            <div class="phone">
+                <label for="phone"><b>Phone Number</b></label>
+                <input type="text" placeholder="Enter your Phone Number" name="phone" required>
+            </div>
+            <div class="PIN">
+                <label for="PIN"><b>PIN Code</b></label>
+                <input type="number" placeholder="Enter your PIN Code" name="PIN" required>
+            </div>
+            <div class="BuyB">
+                <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                <button type="submit" class="btn">Buy!</button>
+            </div>
+        </form>
+    </aside>
+
     <script src="js/PopUp.js"></script>
 </body>
 

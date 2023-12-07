@@ -33,7 +33,7 @@ class Product {
 
 function addToCart(e) {
     // prevent default link behavior
-    e.preventDefault();
+    // e.preventDefault();
     // get the product attributes from DOM
     let product = e.target.parentElement.children;
     // create an array to hold product attributes
@@ -175,3 +175,10 @@ document.addEventListener("DOMContentLoaded", function () {
     // Log shop object to console
     console.log("Ready", shop.cart);
 });
+
+
+
+console.log(localStorage.getItem("Date"));
+
+
+document.querySelector(".Day-Title h2").innerHTML = localStorage.getItem("Date");

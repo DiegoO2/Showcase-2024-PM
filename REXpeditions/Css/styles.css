@@ -1255,7 +1255,71 @@ main.booking4 {
     display: flex;
     flex-flow: row wrap;
 }
-ul.Tours, .Price {
+
+/* cart */
+
+.removeBtn, #emptyCart {
+    display: block;
+    float: right;
+    background-color: rgb(0, 0, 0);
+    color: white;
+    padding: 1em;
+    text-decoration: none;
+    border-radius: 1rem;
+    transition: background-color 500ms ease;    
+}
+.removeBtn:hover, #emptyCart:hover {
+    background-color: red;
+}
+
+#emptyCart {
+    margin-top: 1rem;
+}
+
+#cart {
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-auto-rows: 25vh;
+    gap: 1em;
+    margin-bottom: 2rem;
+}
+
+.cartItem {
+    border: solid 1px black;
+    background-color: white;
+    padding: 1rem;
+    transition: box-shadow 500ms ease;
+    display: flex;
+    gap: 1em;
+    position: relative;
+}
+
+.cartItem img {
+        height: auto;
+        aspect-ratio: 1 / 1;/* change 1 x 1 img */
+        object-fit: cover;
+        flex-shrink: 1;
+}
+.cartItem .cartItemInfo {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.cartItem .cartItemPricing {
+    display: flex;
+    justify-content: space-between;
+}
+.cartTotal {
+    text-align: right;
+}
+
+
+
+
+/* ul.Tours, .Price {
     width: 50%;
     list-style: none;
 }
@@ -1272,7 +1336,7 @@ ul.Tours, .Price {
 }
 .Price li {
     text-align: right;
-}
+} */
 
 .booking4 button{
     width: 12rem;
@@ -1288,14 +1352,14 @@ ul.Tours, .Price {
     margin: 0 auto 1rem auto;
 }
 
-.booking4 p {
+/* .booking4 p {
     width: 50%;
     font-size: 2rem;
     text-align: right;
     display: grid;
     justify-content: end
-}
-.booking4 p::after {
+} */
+/* .booking4 p::after {
     content: "";
     background-color: rgb(75, 113, 75);
     padding: 1px 0;
@@ -1303,15 +1367,18 @@ ul.Tours, .Price {
     align-self: end;
     width: 100%;
     margin-bottom: 3rem;
-}
+} */
 #buyPopUp {
     display: none;
+    justify-content: center;
+    align-items: center;
     position: fixed;
-    left: 50%;
-    transform: translate(-50%, 0);
-    background-color: rgb(6, 45, 16);
-    border-radius: 1rem;
-    z-index: 2;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    z-index: 10;
 }
 .BuyForm {
     color: white;
@@ -1319,6 +1386,9 @@ ul.Tours, .Price {
     display: flex;
     flex-flow: row wrap;
     align-items: start;
+    background-color: rgb(6, 45, 16);
+    border-radius: 1rem;
+    border: solid 1px #61b767;
 }
 .phone, .PIN, .BuyB {
     width: 100%;
@@ -1366,4 +1436,8 @@ ul.Tours, .Price {
     .BuyForm input {
         font-size: .9rem;
     }
+    .BuyForm {
+        width: 80%;
+    }
 }
+

@@ -38,26 +38,32 @@ const renderCalendar = () => {
     let days = "";
 
     for (let x = firstDayIndex; x > 0; x--) {
-        days += `<div class="Pre-D">${preLastDay - x + 1}</div>`;
+        days += `<div class="Pre-D"><a href="Booking3.html" onclick="dateclick()">${preLastDay - x + 1}</a></div>`;
     }
 
     for (let i = 1; i <= lastDay; i++) {
         if (i === new Date().getDate() && date.getMonth() === new Date().getMonth() && date.getFullYear() === new Date().getFullYear()) {// I add here the year to the if
-            days += `<div class="Today">${i}</div>`;
+            days += `<div class="Today"><a href="Booking3.html" onclick="dateclick()">${i}</a></div>`;
         }
         else {
-            days += `<div>${i}</div>`;
+            days += `<div><a href="Booking3.html" onclick="dateclick()">${i}</a></div>`;
         }
         // x +=10  new x=x+10  
     }
 
     for (let j = 1; j <= nextDays; j++) {
-        days += `<div class="Next-D">${j}</div>`;
+        days += `<div class="Next-D"><a href="Booking3.html" onclick="dateclick()">${j}</a></div>`;
         monthDays.innerHTML = days;
 
     }
 
 }
+
+function dateclick(){
+    localStorage.setItem("Date", date.getMonth() + "/" + date.getDate() + " ," + date.getFullYear());
+}
+
+console.log(date.getMonth() + "/" + date.getDate() + " ," + date.getFullYear());
 
 
 document.querySelector(".PreArrow").addEventListener("click", () => { date.setMonth(date.getMonth() - 1);renderCalendar(); });
