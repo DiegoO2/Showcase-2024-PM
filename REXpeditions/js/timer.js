@@ -1,6 +1,4 @@
 
-
-
 var futureDate = new Date("Mar 5, 2024 16:37:52").getTime();
 
 var x = setInterval(function () {
@@ -24,4 +22,3 @@ var x = setInterval(function () {
     document.querySelector(".Tseconds").innerHTML = seconds;
 
 }, 1000)
-

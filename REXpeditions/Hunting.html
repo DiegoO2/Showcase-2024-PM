@@ -17,8 +17,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="Jurassic-Images/JurassicIcon.png">
-
-
+    <script src="js/timer.js"></script>
 </head>
 
 <body>
@@ -110,12 +109,28 @@
                     rewarded
                     for their hard work. Hunters are given equipment to properly hunt dinosaurs and are able to learn
                     how
-                    dinosaurs work in the inside and the type of behaviors enacted when endangered. <strong>Note: Customers must
-                    complete the waiver and be 18+ for this exhibit.</p> <strong>
+                    dinosaurs work in the inside and the type of behaviors enacted when endangered. <b>Note: Customers must
+                    complete the waiver and be 18+ for this exhibit.</b></p> 
                 <img src="Jurassic-Images/Hunting.jpg" alt="Our hunting team">
-                <a href="">Reserve now</a><!-- buy pop up -->
-            </section>
+                <a onclick="openForm()">Reserve now</a>
         </section>
+        <div class="form-popup" id="buyPopUp">
+            <form action="" class="BuyForm">
+                <h1>Reserve</h1>
+                <div class="phone">
+                    <label for="phone"><b>Phone Number</b></label>
+                    <input type="text" placeholder="Enter your Phone Number" name="phone" required>
+                </div>
+                <div class="PIN">
+                    <label for="PIN"><b>PIN Code</b></label>
+                    <input type="number" placeholder="Enter your PIN Code" name="PIN" required>
+                </div>
+                <div class="BuyB">
+                    <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
+                    <button type="submit" class="btn">Reserve!</button>
+                </div>
+            </form>
+        </div>
     </main>
     <footer>
         <img src="Jurassic-Images/JPLOGO.png" alt="Jurassic Park logo">
@@ -146,8 +161,7 @@
         </ul>
         <a href="Tours.html" id="FB">View Tours</a>
     </footer>
-    <script src="js/timer.js"></script>
-      
+    <script src="js/PopUp.js"></script>
 </body>
 
 </html>

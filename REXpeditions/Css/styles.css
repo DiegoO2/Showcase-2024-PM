@@ -927,9 +927,9 @@ main.hunting {
         width: 100%;
     }
 }
-@media only screen and (max-width: 600px) {
+/* @media only screen and (max-width: 600px) {
 
-}
+} */
 
 /* calendar booking  */
 
@@ -1309,7 +1309,7 @@ ul.Tours, .Price {
     position: fixed;
     left: 50%;
     transform: translate(-50%, 0);
-    background-color: #326c37;
+    background-color: rgb(6, 45, 16);
     border-radius: 1rem;
     z-index: 2;
 }
@@ -1342,11 +1342,19 @@ ul.Tours, .Price {
     font-size: 1rem;
     padding: .5rem;
 }
-.booking4 .form-popup button{
+.form-popup button{
     padding: 1rem 1rem;
     margin: 0 1rem;
     font-size: 1rem;
     width: 7rem;
+    background-color: #61b767;
+    border-radius: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+
 }
 @media only screen and (max-width: 600px) {
     .booking4 button{
@@ -1358,7 +1366,4 @@ ul.Tours, .Price {
     .BuyForm input {
         font-size: .9rem;
     }
-    
-        
-
 }

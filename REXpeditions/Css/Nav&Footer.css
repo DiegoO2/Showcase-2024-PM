@@ -40,6 +40,9 @@ footer #FB {
     footer #FB, footer ul:nth-child(3), footer ul:nth-child(4){
         display: none;
     }
+    footer{
+        height: 10rem;
+    }
 }
 footer img[src$=".png"] {
     width:clamp(6rem, 13vw, 10rem);
