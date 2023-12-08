@@ -101,12 +101,14 @@ function updateCart() {
     let total = 0;
     // check if cart is empty
     if (shop.cart.length === 0) {
-        cart.innerHTML = '<h3>Your cart is empty</h3>';
+        cart.innerHTML = '<h2>Your cart is empty</h2>';
+        document.getElementById("TotalPrice").style.display = "none";
         return;
     }
     // loop through cart and add items to cart element
     for (let [index, item] of shop.cart.entries()) {
         total += item.price * item.qty;
+        document.getElementById("TotalPrice").style.display = "block";
         cart.innerHTML += `
         <div class="cartItem">
             <img src="${item.imgSrc}" alt="${item.name}">

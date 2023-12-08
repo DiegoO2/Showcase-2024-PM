@@ -3,13 +3,14 @@ var futureDate = new Date("Mar 5, 2024 16:37:52").getTime();
 
 var x = setInterval(function () {
 
+    var now = new Date().getTime();
+
+    var distance = futureDate - now;
+    
     if (distance < 0) {
         futureDate.setMonth(futureDate.getMonth() + 3);//every 3 months 
     }
 
-    var now = new Date().getTime();
-
-    var distance = futureDate - now;
 
     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));

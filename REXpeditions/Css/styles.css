@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
 }
+
 /* fonts import */
 
 
@@ -15,9 +16,17 @@ main.index {
 
 /* start button */
 
-#start {
+.home-w a {
     scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
+}
+.home-w a:hover {
+    background-color: #c3f7c7;
+    transition: background-color 1000ms ease;
+
+}
+.home-w a:active {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 500ms ease;
 }
 
 /* premium tours index */
@@ -29,15 +38,18 @@ main.index {
     width: 100%;
     margin: auto;
 }
-.Premium-Tours h2{
+
+.Premium-Tours h2 {
     font-size: 3rem;
     text-align: center;
     padding-top: 3rem;
 }
+
 .Wrapper-P {
     display: flex;
     flex-flow: row wrap;
 }
+
 .slides-P {
     margin: auto;
     flex-flow: row wrap;
@@ -50,11 +62,13 @@ main.index {
     font-family: 'Sorts Mill Goudy', serif;
 
 }
+
 .P-Tour img {
     margin-top: 3rem;
     width: 100%;
     object-fit: cover;
 }
+
 .P-Tour {
     width: 30%;
     display: flex;
@@ -63,17 +77,20 @@ main.index {
     align-items: center;
     border-radius: .5rem;
 }
+
 .P-Tour h3 {
     text-align: center;
     font-size: 2rem;
     width: 100%;
 }
+
 .P-Tour p {
     width: 100%;
     text-align: center;
     font-size: large;
-    margin:1rem 0;
+    margin: 1rem 0;
 }
+
 .P-Tour a {
     background-color: #7FD9FC;
     padding: 1rem 2rem;
@@ -83,6 +100,16 @@ main.index {
     font-size: 1.5rem;
     font-weight: bold;
 }
+.P-Tour a:hover {
+    background-color: #138bba;
+    transition: background-color 1000ms ease;
+
+}
+.P-Tour a:active {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 500ms ease;
+}
+
 .P-Nav {
     display: none;
 }
@@ -94,6 +121,7 @@ main.index {
         display: flex;
         justify-content: center;
     }
+
     .slides-P {
         width: 100%;
         overflow-x: hidden;
@@ -103,26 +131,35 @@ main.index {
         flex-flow: row nowrap;
 
     }
+
     .P-Tour {
         width: 100%;
         scroll-snap-align: start;
         flex-shrink: 0;
     }
+
     .P-Nav {
         display: flex;
         column-gap: 1rem;
     }
+
     .P-Tour img {
         width: 50%;
         object-fit: cover;
     }
+
     .P-Nav a {
         margin-top: 1rem;
         background-color: rgb(48, 102, 127);
         padding: 1rem;
         border-radius: 50%;
     }
+    .P-Nav a {
+        background-color: rgb(118, 161, 182);
+        transition: background-color 500ms ease;
+    }
 }
+
 @media only screen and (max-width: 700px) {
     .P-Tour img {
         width: 100%;
@@ -132,7 +169,7 @@ main.index {
 
 /* basic tours index */
 
-.Basic-Tours h2{
+.Basic-Tours h2 {
     font-size: 3rem;
     text-align: center;
     padding-top: 3rem;
@@ -147,7 +184,8 @@ main.index {
     flex-flow: row wrap;
     justify-content: center;
 }
-.slides-B{
+
+.slides-B {
     display: flex;
     overflow-x: hidden;
     scroll-behavior: smooth;
@@ -155,6 +193,7 @@ main.index {
     scroll-snap-type: x mandatory;
     -webkit-overflow-scrolling: touch;
 }
+
 .slides-B::-webkit-scrollbar-thumb {
     scroll-snap-type: x mandatory;
 }
@@ -170,35 +209,41 @@ main.index {
 }
 
 .B-Tour-L {
-    margin:  0 auto;
+    margin: 0 auto;
     width: 48%;
     display: grid;
     align-items: flex-start;
     align-content: flex-start;
     padding: 2rem;
 }
+
 .B-Tour img {
     width: 50%;
     object-fit: cover;
 }
+
 .B-Tour .white {
     width: 100%;
     background-color: rgb(255, 255, 255);
 }
+
 .B-Tour .background {
     background-color: rgba(204, 255, 221, 0.293);
     padding: 1.5rem;
 
 }
+
 .B-Tour h3 {
     width: 100%;
     font-size: 2rem;
     margin-bottom: 2rem;
 }
+
 .B-Tour p {
     font-size: 1.5rem;
     margin-bottom: 2rem;
 }
+
 .B-Tour a {
     background-color: #7FD9FC;
     padding: 1rem 3rem;
@@ -209,18 +254,31 @@ main.index {
     font-size: 1.5rem;
     justify-self: flex-end;
 }
+.B-Tour a:hover {
+    background-color: #138bba;
+    transition: background-color 1000ms ease;
+
+}
+.B-Tour a:active {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 500ms ease;
+}
+
 .B-Nav {
     display: flex;
     column-gap: 1rem;
 }
+
 .B-Nav a {
     margin-top: 1rem;
     background-color: rgb(48, 102, 127);
     padding: 1rem;
     border-radius: 50%;
 }
+
 .B-Nav a:hover {
     background-color: rgb(94, 152, 180);
+    transition: background-color 500ms ease;
 }
 
 .B-Nav a:active {
@@ -234,21 +292,26 @@ main.index {
         flex-flow: column nowrap;
         justify-content: start;
     }
+
     .B-Tour-L {
         width: 100%;
     }
+
     .B-Tour img {
         width: 100%;
     }
+
     .B-Tour-L {
         padding: 1rem;
     }
 }
+
 @media only screen and (max-width: 800px) {
     .B-Tour p {
         font-size: 1.2rem;
         margin-bottom: 1rem;
     }
+
     .B-Nav a {
         justify-self: flex-end;
     }
@@ -259,7 +322,7 @@ main.index {
 
 .Extra {
     display: flex;
-    flex-flow: row  wrap;
+    flex-flow: row wrap;
     justify-content: center;
     width: 80%;
     margin: 0 auto;
@@ -273,10 +336,12 @@ main.index {
     width: 100%;
     font-size: 1.5rem;
 }
+
 .Quote img {
     object-fit: cover;
     width: 50%;
 }
+
 .Quote-L {
     width: 50%;
     display: flex;
@@ -284,27 +349,33 @@ main.index {
     align-content: center;
     padding: 0 2rem;
 }
-.Quote-L h2{
+
+.Quote-L h2 {
     font-size: 2rem;
-    width: 100%;    
+    width: 100%;
     text-align: center;
 }
+
 .Quote-L q {
     width: 100%;
     text-align: center;
-} 
+}
+
 .Quote-L p {
     width: 100%;
     text-align: right;
 }
+
 .Contact {
     width: 100%;
     display: flex;
 }
+
 .Contact img {
     object-fit: cover;
     width: 50%;
 }
+
 .Contact-L {
     width: 50%;
     display: flex;
@@ -312,11 +383,13 @@ main.index {
     justify-content: center;
     align-content: center;
 }
-.Contact-L h2{
+
+.Contact-L h2 {
     font-size: 4rem;
-    width: 100%;    
+    width: 100%;
     text-align: center;
 }
+
 .Contact-L a {
     background-color: #91c41b;
     width: 60%;
@@ -330,32 +403,51 @@ main.index {
     text-decoration: none;
     margin-top: 2rem;
 }
+.Contact-L a:hover {
+    background-color: rgb(89, 124, 7);
+    transition: background-color 1000ms ease;
+
+}
+.Contact-L a:active {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 500ms ease;
+}
+
+
 @media only screen and (max-width: 1200px) {
     .Contact {
         flex-direction: column;
     }
-    .Contact img, .Contact-L {
+
+    .Contact img,
+    .Contact-L {
         width: 100%;
     }
+
     .Contact img {
         margin-top: 2rem;
     }
+
     .Quote img {
         display: none;
     }
+
     .Quote-L {
         width: 100%;
         padding: 0;
     }
+
     .Quote-L q {
         text-align: left;
         font-size: 1rem;
-    } 
+    }
+
     .Contact-L a {
         width: 100%;
         font-size: 1.5rem;
     }
-    .Contact-L h2{
+
+    .Contact-L h2 {
         margin-top: 2rem;
         font-size: 2rem;
     }
@@ -369,7 +461,8 @@ main.index {
     padding: 2rem 0;
 }
 
-.WhatIs { /*  For mobile move the jurassic image to the top :D */
+.WhatIs {
+    /*  For mobile move the jurassic image to the top :D */
     position: relative;
     display: flex;
     justify-content: center;
@@ -386,20 +479,25 @@ main.index {
     align-content: center;
     padding: 3rem;
 }
+
 .WhatIs-L h2 {
     width: 100%;
     text-align: center;
     font-size: 3rem
 }
+
 .WhatIs-L p {
     text-align: justify;
     font-size: 1.5rem
 }
+
 .WhatIs img {
     width: 50%;
-    object-fit: contain; /*  keep contain */
+    object-fit: contain;
+    /*  keep contain */
     border-radius: 5rem;
 }
+
 .WhatIs-L a {
     background-color: #326c37;
     width: 100%;
@@ -413,25 +511,40 @@ main.index {
     text-decoration: none;
     margin-top: 2rem;
 }
+.WhatIs-L a:hover {
+    background-color: #043b09;
+    transition: background-color 1000ms ease;
+
+}
+.WhatIs-L a:active {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 500ms ease;
+}
+
 @media only screen and (max-width: 1200px) {
-    .WhatIs{
+    .WhatIs {
         flex-direction: column-reverse;
         width: 80%;
     }
-    .WhatIs-L, .WhatIs img[src$=".jpg"] {
+
+    .WhatIs-L,
+    .WhatIs img[src$=".jpg"] {
         width: 100%;
         padding: 1rem 0;
     }
+
     .WhatIs-L p {
         font-size: 1.1rem
-    }    
+    }
+
     .WhatIs-L h2 {
         margin-bottom: 1rem;
     }
+
     .WhatIs-L a {
         font-size: 1.5rem;
     }
-    
+
 }
 
 
@@ -453,16 +566,19 @@ main.index {
     position: relative;
     width: 20%;
 }
+
 .Staff img {
     object-fit: cover;
     width: 100%;
     border-radius: 1rem;
     height: 25rem;
 }
+
 .Staff p {
     width: 100%;
     font-size: 1.5rem;
 }
+
 /* h2 tours  */
 
 main.Tours {
@@ -478,18 +594,19 @@ main.Tours {
 }
 
 @media only screen and (max-width: 1200px) {
-    .Our-Staff{
+    .Our-Staff {
         width: 80%;
         margin: 1rem auto auto;
 
     }
+
     .Staff {
         width: 100%;
         margin-bottom: 6rem;
     }
 }
 
-/* premium tours tours no touch this part, I did good here it is semi web responsable*/
+/* premium tours tours*/
 
 .PremiumTours {
     position: relative;
@@ -502,38 +619,47 @@ main.Tours {
     font-family: 'Sorts Mill Goudy', serif;
 }
 
-.PremiumTours::after, .PremiumTours::before, .BasicTours::after, .BasicTours::before{  /* For both basic and premium tours */
+.PremiumTours::after,
+.PremiumTours::before,
+.BasicTours::after,
+.BasicTours::before {
+    /* For both basic and premium tours */
     content: "";
     background-color: rgb(75, 113, 75);
     padding: .5rem;
 }
 
-.PremiumTours img[src$=".jpg"] { /* for mobile version use media to column for the image */
+.PremiumTours img[src$=".jpg"] {
     object-fit: cover;
-    width:50%;
+    width: 50%;
 }
+
 .PTL {
-    width:50%;
+    width: 50%;
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
     justify-content: space-between;
     padding: 2rem;
 }
+
 .PremiumTours h3 {
     width: 100%;
     font-size: clamp(2rem, 5vw, 2.5rem);
 }
+
 .PremiumTours h4 {
     width: 100%;
     font-size: 1.5rem;
     color: #305239;
 }
+
 .PremiumTours p {
     font-size: large;
     text-align: justify;
     margin: 1rem auto;
 }
+
 .PremiumTours ul {
     list-style: none;
     font-size: 2rem;
@@ -541,6 +667,7 @@ main.Tours {
     margin-bottom: 1rem;
 
 }
+
 .PremiumTours a {
     background-color: #326c37;
     padding: 1rem 2rem;
@@ -553,25 +680,41 @@ main.Tours {
     text-decoration: none;
     margin-bottom: 1rem;
 }
-.Tours  img[src$="Logo.png"]{ 
+.PremiumTours a:hover {
+    background-color: #043b09;
+    transition: background-color 1000ms ease;
+
+}
+.PremiumTours a:active {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 500ms ease;
+}
+
+.Tours img[src$="Logo.png"] {
     height: 2rem;
     display: inline;
     vertical-align: top;
 }
 
 @media only screen and (max-width: 1600px) {
-    .PremiumTours{
+    .PremiumTours {
         flex-direction: column;
     }
-    .PTL, .PremiumTours img[src$=".jpg"] {
+
+    .PTL,
+    .PremiumTours img[src$=".jpg"] {
         width: 100%;
     }
+
     #baby {
         flex-direction: column-reverse;
     }
-    .PremiumTours::after, .PremiumTours::before{
+
+    .PremiumTours::after,
+    .PremiumTours::before {
         display: none;
     }
+
     .PTL {
         padding: 2rem 0;
     }
@@ -589,32 +732,39 @@ main.Tours {
     margin: 0 auto 2rem auto;
     font-family: 'Sorts Mill Goudy', serif;
 }
+
 .BTL {
-    width:50%;
+    width: 50%;
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
     justify-content: space-between;
     padding: 2rem;
 }
-.BasicTours img[src$=".jpg"] { /* for mobile version use media to column for the image */
+
+.BasicTours img[src$=".jpg"] {
+    /* for mobile version use media to column for the image */
     object-fit: cover;
-    width:50%;
+    width: 50%;
 }
+
 .BasicTours h3 {
     width: 100%;
     font-size: clamp(2rem, 5vw, 2.5rem);
 }
+
 .BasicTours h4 {
     width: 100%;
     font-size: 1.5rem;
     color: #305239;
 }
+
 .BasicTours p {
     font-size: large;
     text-align: justify;
     margin: 1rem auto;
 }
+
 .BasicTours ul {
     list-style: none;
     font-size: 2rem;
@@ -622,6 +772,7 @@ main.Tours {
     margin-bottom: 1rem;
 
 }
+
 .BasicTours a {
     width: 80%;
     background-color: #326c37;
@@ -635,28 +786,47 @@ main.Tours {
     text-decoration: none;
     margin: 0 auto 1rem auto;
 }
+.BasicTours a:hover {
+    background-color: #043b09;
+    transition: background-color 1000ms ease;
+
+}
+.BasicTours a:active {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 500ms ease;
+}
+
 @media only screen and (max-width: 1400px) {
-    .BasicTours{
+    .BasicTours {
         flex-direction: column;
     }
-    .BTL, .BasicTours img[src$=".jpg"] {
+
+    .BTL,
+    .BasicTours img[src$=".jpg"] {
         width: 100%;
     }
+
     #baby {
         flex-direction: column-reverse;
     }
-    .BasicTours::after, .BasicTours::before {
+
+    .BasicTours::after,
+    .BasicTours::before {
         display: none;
     }
+
     .BasicTours a {
         width: 100%;
     }
+
     #car {
         margin: 0 auto;
     }
+
     .BasicTours #carB {
         margin: 0 auto;
     }
+
     .BTL {
         padding: 2rem 0;
     }
@@ -673,10 +843,12 @@ main.Tours {
     width: 100%;
     margin-bottom: 3rem;
 }
+
 #HTitle {
     text-align: center;
     font-size: clamp(2rem, 5vw, 2.5rem);
 }
+
 .Hunting {
     position: relative;
     display: flex;
@@ -687,14 +859,16 @@ main.Tours {
     padding-bottom: 3rem;
     font-family: 'Sorts Mill Goudy', serif;
 }
+
 .HL {
-    width:50%;
+    width: 50%;
     display: flex;
     flex-flow: row wrap;
     align-content: flex-start;
     justify-content: space-between;
     padding: 2rem;
 }
+
 .Hunting a {
     width: 100%;
     background-color: #326c37;
@@ -708,15 +882,28 @@ main.Tours {
     text-decoration: none;
     margin: 0 auto 1rem auto;
 }
-.Hunting img[src$=".jpg"] { /* for mobile version use media to column for the image */
-    object-fit: cover;
-    width:50%;
+.Hunting a:hover {
+    background-color: #043b09;
+    transition: background-color 1000ms ease;
+
 }
+.Hunting a:active {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 500ms ease;
+}
+
+.Hunting img[src$=".jpg"] {
+    /* for mobile version use media to column for the image */
+    object-fit: cover;
+    width: 50%;
+}
+
 .Hunting p {
     font-size: large;
     text-align: justify;
     margin: 1rem auto;
 }
+
 .Hunting ul {
     list-style: none;
     font-size: 2rem;
@@ -724,13 +911,17 @@ main.Tours {
     margin-bottom: 1rem;
 
 }
+
 @media only screen and (max-width: 1400px) {
-    .Hunting{
+    .Hunting {
         flex-direction: column;
     }
-    .HL, .Hunting img[src$=".jpg"] {
+
+    .HL,
+    .Hunting img[src$=".jpg"] {
         width: 100%;
     }
+
     .HL {
         padding: 2rem 0;
     }
@@ -750,12 +941,12 @@ main.contact {
     flex-flow: row wrap;
     width: 80%;
     margin: 0 auto;
-    background-color:rgba(115, 130, 115, 0.186);
+    background-color: rgba(115, 130, 115, 0.186);
     padding: 1rem;
     border-radius: 1rem;
 }
 
-.ContactForm label{
+.ContactForm label {
     margin: 1rem 0;
     width: 100%;
     font-size: 1.5rem;
@@ -765,7 +956,10 @@ main.contact {
     width: 50%;
 }
 
-#FirstName, #LastName, #Email, #Phone  {
+#FirstName,
+#LastName,
+#Email,
+#Phone {
     width: 20rem;
     font-size: 1rem;
     padding: .3rem;
@@ -773,7 +967,8 @@ main.contact {
     border: solid rgb(115, 130, 115) 1px;
 
 }
-#QFR{
+
+#QFR {
     width: 100%;
     resize: vertical;
     height: 10rem;
@@ -781,17 +976,20 @@ main.contact {
     padding: .3rem;
     border-radius: .3rem;
 }
+
 #Numbers {
     font-size: 1rem;
     border-radius: .3rem;
     padding: .3rem;
 
 }
+
 .ContactForm div {
     width: 100%;
     margin: 1rem 0;
 }
-.ContactForm [type=submit] {
+
+.ContactForm a {
     width: 100%;
     background-color: #326c37;
     padding: 1rem 2rem;
@@ -803,6 +1001,16 @@ main.contact {
     color: rgb(255, 255, 255);
     text-decoration: none;
     margin: 0 auto 1rem auto;
+}
+
+.ContactForm a:hover {
+    background-color: #043b09;
+    transition: background-color 1000ms ease;
+
+}
+.ContactForm a:active {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 500ms ease;
 }
 
 
@@ -833,12 +1041,14 @@ main.hunting {
     font-family: 'Nova Square', sans-serif;
     width: 80%;
 }
-.Hunting-W table th{
+
+.Hunting-W table th {
     font-family: 'Nova Square', sans-serif;
     width: 2rem;
     font-size: 8vw;
 }
-.Hunting-W table td{
+
+.Hunting-W table td {
     font-size: 3vw;
     width: 10vh;
     font-family: 'Nova Square', sans-serif;
@@ -846,7 +1056,6 @@ main.hunting {
     text-align: center;
 
 }
-
 
 /* Hunting extra hunting */
 
@@ -881,10 +1090,12 @@ main.hunting {
     width: 100%;
     font-family: 'Sorts Mill Goudy', serif;
 }
+
 .HL2 img {
     width: 50%;
     object-fit: cover;
 }
+
 .HL2 p {
     padding: 2rem;
     width: 50%;
@@ -905,31 +1116,42 @@ main.hunting {
     text-decoration: none;
     margin: 1rem auto 0 auto;
 }
+.HL2 a:hover {
+    background-color: #043b09;
+    transition: background-color 1000ms ease;
+
+}
+.HL2 a:active {
+    background-color: rgb(0, 0, 0);
+    transition: background-color 500ms ease;
+}
 
 @media only screen and (max-width: 1200px) {
-    .HL2{
+    .HL2 {
         flex-direction: column;
     }
-    .HL2 img, .HL2 p {
+
+    .HL2 img,
+    .HL2 p {
         width: 80%;
         margin: 0 auto;
         padding: 0;
         font-size: 1.1rem;
     }
-    .HL2 img{
+
+    .HL2 img {
         margin: 1rem auto;
     }
+
     .HL2 a {
         width: 80%;
         margin: 0 auto;
     }
+
     .Hunting-W {
         width: 100%;
     }
 }
-/* @media only screen and (max-width: 600px) {
-
-} */
 
 /* calendar booking  */
 
@@ -945,18 +1167,21 @@ main.hunting {
     font-family: 'Sorts Mill Goudy', serif;
 
 }
+
 .booking h2 {
     width: 100%;
     font-size: clamp(2.5rem, 5vw, 4rem);
     margin: 3rem;
     text-align: center;
 }
+
 .Calendar {
     width: 80%;
     height: 48rem;
     overflow: hidden;
     border-radius: 1rem;
 }
+
 .Date {
     background-color: #3aab59;
     display: flex;
@@ -964,6 +1189,7 @@ main.hunting {
     align-items: center;
     height: 20%;
 }
+
 .Date div.Dtitle {
     width: 100%;
     margin: 0 2rem;
@@ -972,23 +1198,28 @@ main.hunting {
     align-items: center;
     justify-content: center;
 }
+
 .Date div h3 {
     width: 100%;
     text-align: center;
     font-size: 4rem;
 }
+
 .Date div p {
     width: 100%;
     text-align: center;
     font-size: 2rem;
     font-family: 'Work Sans', sans-serif;
 }
-.Date .PreArrow,  .NextArrow {
+
+.Date .PreArrow,
+.NextArrow {
     text-decoration: none;
     color: white;
     font-size: 3rem;
     padding: 1rem;
 }
+
 .Weekdays {
     background-color: #305239;
     display: flex;
@@ -999,12 +1230,14 @@ main.hunting {
     margin: auto;
     height: 10%;
     background-color: #61976f;
-} 
+}
+
 .Weekdays div {
     width: calc(100%/7);
     text-align: center;
     font-size: 2rem;
 }
+
 .Days {
     padding: 1rem 0;
     background-color: #232323;
@@ -1013,6 +1246,7 @@ main.hunting {
     display: flex;
     flex-flow: row wrap;
 }
+
 .Days div {
     font-size: 1.5rem;
     width: calc(100%/7);
@@ -1022,20 +1256,26 @@ main.hunting {
     font-family: 'Work Sans', sans-serif;
 
 }
+
 .Days div a {
     text-decoration: none;
     color: white;
 }
-.Pre-D , .Next-D {
+
+.Pre-D,
+.Next-D {
     opacity: 0.5;
 }
+
 .Today {
     background-color: rgb(44, 122, 44);
 }
-.Days div:hover:not(.Today){
+
+.Days div:hover:not(.Today) {
     border: gray solid 1px;
     background-color: #4d4d4d;
 }
+
 .GoBackArrow {
     position: absolute;
     width: 10%;
@@ -1047,7 +1287,8 @@ main.hunting {
     top: 50%;
 
 }
-.GoBackArrow a img{
+
+.GoBackArrow a img {
     width: 4rem;
 }
 
@@ -1055,19 +1296,25 @@ main.hunting {
     .Weekdays div {
         font-size: 1rem;
     }
-    .GoBackArrow a img{
+
+    .GoBackArrow a img {
         width: 1.8rem;
     }
+
     .Date div h3 {
         font-size: 2rem;
     }
+
     .Date div p {
         font-size: 1.3rem;
     }
+
     .Calendar {
         height: 35rem;
     }
-    .Date .PreArrow,  .NextArrow {
+
+    .Date .PreArrow,
+    .NextArrow {
         font-size: 2.5rem;
         padding: .5rem;
     }
@@ -1079,18 +1326,21 @@ main.hunting {
     background-color: #305239;
     padding: 3rem 0;
     color: white;
-    
+
 }
+
 .booking2 h2 {
     width: 100%;
     font-size: clamp(2.5rem, 5vw, 4rem);
     text-align: center;
     font-family: 'Sorts Mill Goudy', serif;
 }
+
 .Table-wrapper {
     width: 80%;
     margin: 0 auto;
 }
+
 table.S-table {
     width: 100%;
     margin: auto;
@@ -1100,7 +1350,8 @@ table.S-table {
     border: #232323 solid 3px;
 
 }
-table.S-table th{
+
+table.S-table th {
     font-family: 'Nova Square', sans-serif;
     font-size: clamp(.7rem, 2vw, 2rem);
     border: #232323 solid 3px;
@@ -1110,7 +1361,8 @@ table.S-table th{
     width: 6vh;
 
 }
-table.S-table td{
+
+table.S-table td {
     font-size: clamp(1rem, 3vw, 3rem);
     font-family: 'Nova Square', sans-serif;
     font-weight: lighter;
@@ -1120,7 +1372,8 @@ table.S-table td{
     height: 3vh;
 
 }
-table.S-table td a{
+
+table.S-table td a {
     background-color: rgb(44, 122, 44);
     display: block;
     width: 100%;
@@ -1132,12 +1385,13 @@ table.S-table td a{
     justify-content: center;
     align-items: center;
 }
+
 table.S-table td #adif {
     justify-content: flex-start;
     padding-left: 1vw;
 }
 
-table.S-table td a:hover{
+table.S-table td a:hover {
     background-color: rgb(79, 150, 79);
 }
 
@@ -1175,12 +1429,16 @@ body.bodybooking3 {
     padding: 1rem;
     border-radius: 1rem;
 }
-.Booking-Form label{
+
+.Booking-Form label {
     margin: 1rem 0;
     width: 100%;
     font-size: 1.5rem;
 }
-#Adults, #Kids, [placeholder="First Name & Last Name"]  {
+
+#Adults,
+#Kids,
+[placeholder="First Name & Last Name"] {
     width: 50%;
     font-size: 1rem;
     padding: .3rem;
@@ -1188,13 +1446,16 @@ body.bodybooking3 {
     border: solid rgb(0, 0, 0) 1px;
     background-color: #f1fff1;
 }
+
 .Booking-Form [action=NameOfPeople] {
     display: flex;
     flex-flow: column wrap;
 }
+
 [action=NameOfPeople] input {
     margin-bottom: 1rem;
 }
+
 .buttons {
     width: 80%;
     display: flex;
@@ -1217,14 +1478,19 @@ body.bodybooking3 {
     text-decoration: none;
     margin-bottom: 1rem;
 }
+
 .SeeMore:hover {
     background-color: #97d69b;
 }
 
 @media only screen and (max-width: 1300px) {
-    #Adults, #Kids, [placeholder="First Name & Last Name"]  {
+
+    #Adults,
+    #Kids,
+    [placeholder="First Name & Last Name"] {
         width: 100%;
     }
+
     .SeeMore {
         font-size: 1.8rem;
     }
@@ -1243,6 +1509,7 @@ body.bodybooking3 {
     font-family: 'Sorts Mill Goudy', serif;
     padding: 3rem 0;
 }
+
 main.booking4 {
     width: 100%;
     display: grid;
@@ -1250,6 +1517,7 @@ main.booking4 {
     justify-items: center;
     margin: auto;
 }
+
 .booking4 .contentdiv {
     width: 80%;
     display: flex;
@@ -1258,7 +1526,8 @@ main.booking4 {
 
 /* cart */
 
-.removeBtn, #emptyCart {
+.removeBtn,
+#emptyCart {
     display: block;
     float: right;
     background-color: rgb(0, 0, 0);
@@ -1266,23 +1535,24 @@ main.booking4 {
     padding: 1em;
     text-decoration: none;
     border-radius: 1rem;
-    transition: background-color 500ms ease;    
+    transition: background-color 500ms ease;
 }
-.removeBtn:hover, #emptyCart:hover {
+
+.removeBtn:hover,
+#emptyCart:hover {
     background-color: red;
 }
 
 #emptyCart {
-    margin-top: 1rem;
+    margin: 1rem 0;
 }
 
 #cart {
     width: 100%;
     margin: 0 auto;
     display: grid;
-    grid-auto-rows: 25vh;
+    /* grid-auto-rows: 30vh; */
     gap: 1em;
-    margin-bottom: 2rem;
 }
 
 .cartItem {
@@ -1293,14 +1563,29 @@ main.booking4 {
     display: flex;
     gap: 1em;
     position: relative;
+    height: 30svh;
 }
 
-.cartItem img {
-        height: auto;
-        aspect-ratio: 1 / 1;/* change 1 x 1 img */
-        object-fit: cover;
-        flex-shrink: 1;
+.cartItem h3 {
+    font-size: 2rem;
+    font-family: 'Sorts Mill Goudy', serif;
 }
+
+.cartItem p {
+    font-size: 1.3rem;
+    font-family: 'Sorts Mill Goudy', serif;
+}
+.cartItemPricing p{
+    font-family:'Times New Roman', Times, serif ;
+}
+.cartItem img {
+    height: auto;
+    aspect-ratio: 1 / 1;
+    /* change 1 x 1 img */
+    object-fit: cover;
+    flex-shrink: 1;
+}
+
 .cartItem .cartItemInfo {
     flex-grow: 1;
     display: flex;
@@ -1312,11 +1597,53 @@ main.booking4 {
     display: flex;
     justify-content: space-between;
 }
+
 .cartTotal {
     text-align: right;
+    height: auto;
 }
 
+.cartTotal h3 {
+    font-size: 3rem;
+}
 
+@media only screen and (max-width: 1200px) {
+    .cartItem {
+        flex-flow: column nowrap;
+        height: auto;
+        width: 100%;
+        margin: 0 auto;
+    }
+    .cartItem img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        /* change 1 x 1 img */
+        object-fit: cover;
+        flex-shrink: 1;
+    }
+    #cart {
+        display: flex;
+        flex-flow: column wrap;
+    }
+    .cartItemPricing {
+        margin-top: 1rem;
+        flex-flow: column;
+        gap: 1rem;
+    }
+    .cartItem h3 {
+        font-size: 1.6rem;
+    }
+    .cartItem p {
+        font-size: 1rem;
+    }
+    .cartTotal h3 {
+        font-size: 2rem;
+        text-align: center;
+    }
+    .cartTotal {
+        flex-flow: column-reverse;
+    }
+}
 
 
 /* ul.Tours, .Price {
@@ -1338,8 +1665,8 @@ main.booking4 {
     text-align: right;
 } */
 
-.booking4 button{
-    width: 12rem;
+.booking4 .open-button {
+    width: 14rem;
     background-color: #61b767;
     padding: 1rem 2rem;
     border-radius: 1rem;
@@ -1377,9 +1704,10 @@ main.booking4 {
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(0,0,0,0.8);
+    background-color: rgba(0, 0, 0, 0.8);
     z-index: 10;
 }
+
 .BuyForm {
     color: white;
     padding: 2rem;
@@ -1390,29 +1718,37 @@ main.booking4 {
     border-radius: 1rem;
     border: solid 1px #61b767;
 }
-.phone, .PIN, .BuyB {
+
+.phone,
+.PIN,
+.BuyB {
     width: 100%;
     margin: .5rem 0;
 }
+
 .BuyB {
     display: flex;
     align-content: center;
     justify-content: center;
 }
+
 .form-popup h1 {
     width: 100%;
     text-align: center;
     font-size: 3rem;
     margin-bottom: 1rem;
 }
+
 .BuyForm label {
     font-size: 2rem;
 }
+
 .BuyForm input {
     font-size: 1rem;
     padding: .5rem;
 }
-.form-popup button{
+
+.form-popup button {
     padding: 1rem 1rem;
     margin: 0 1rem;
     font-size: 1rem;
@@ -1426,18 +1762,21 @@ main.booking4 {
     text-decoration: none;
 
 }
+
 @media only screen and (max-width: 600px) {
-    .booking4 button{
+    .booking4 .open-button {
         font-size: 1.5rem;
     }
+
     .BuyForm label {
         font-size: 1.5rem;
     }
+
     .BuyForm input {
         font-size: .9rem;
     }
+
     .BuyForm {
         width: 80%;
     }
 }
-
