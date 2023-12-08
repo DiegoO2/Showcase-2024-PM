@@ -116,10 +116,10 @@ footer img[src$=".png"] {
 .material-symbols-outlined {
     color: white;
 }
-/* .nav2 :hover {
+.nav2 a:hover {
     text-decoration: underline;
     transition: transform 0.25s ease-out;
-} */
+}
 .nav2 ul  li a::after {
     content: '';
     position: absolute;
