@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass+Mono&family=Oxanium&display=swap');
 
 /* Footer part  */
 
@@ -61,7 +62,7 @@ footer img[src$=".png"] {
 
 .nav2 { 
     background-color: #285C4D;
-    height: 7svh;
+    height: 6svh;
     display: flex;
 }
 .nav2 img[src$=".png"]{
@@ -115,14 +116,35 @@ footer img[src$=".png"] {
 .material-symbols-outlined {
     color: white;
 }
-.nav2 a[href$=".html"]:hover {
+/* .nav2 :hover {
     text-decoration: underline;
+    transition: transform 0.25s ease-out;
+} */
+.nav2 ul  li a::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(255, 255, 255);
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+    border-radius: 50px;
+    z-index: 10;
 }
+
+.nav2 ul  li a[href$=".html"]::after:hover {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
 /* Header part home */
 
-.HomeHeader {/* hi, use dvh for the height  */
+.HomeHeader {/* hi, use svh for the height  */
     width: 100%;
-    min-height: 93svh;
+    height: 88svh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner.jpg);
     background-size: cover;
     color: white;
@@ -145,20 +167,28 @@ footer img[src$=".png"] {
     .home-w {
         width: 70%;
     }
+    .HomeHeader {
+        height: 94svh;
+    }
 }
 @media only screen and (max-width: 600px) {
     .home-w {
         width: 90%;
     }
+    #displayednone{
+        display: none;
+    }
 }
 
 .HomeHeader h1 {
-    font-family: 'Luckiest Guy', cursive;
-    font-size: clamp(4rem, 10vw, 9rem);
+    font-family: 'Kalnia', serif;
+    font-size: clamp(3.5rem, 10vw, 9rem);
     width: 100%;
     text-align: center;
 }
-
+.HomeHeader #espanolheader {
+    font-size: clamp(3rem, 10vw, 9rem);
+}
 .HomeHeader p {
     width: 100%;
     font-size: clamp(.9rem, 3vw, 1.5rem);
@@ -178,6 +208,7 @@ footer img[src$=".png"] {
 
 /* normal header */
 
+
 .Nheader {
     height: 20dvh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/REXpeditions/Jurassic-Images/Banner2.png);
@@ -192,4 +223,86 @@ footer img[src$=".png"] {
     font-size: clamp(3rem, 5vw, 5rem);
     text-align: center;
     font-family: 'Libre Baskerville', serif;
+}
+
+
+/* nav 1  */
+
+
+.header {
+    border:none;
+    width:100%;
+    font-family:'Overpass Mono', monospace;
+    background-color: white;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0rem;
+    /* padding-left:1em; */
+    /* padding-top: 2em; */
+    height: 6svh;
+}
+
+body {
+    margin-bottom: 0;
+}
+
+.headerItem {
+    display: inline-block;
+    position: relative;
+    color: #0087ca;
+}
+
+.headerItem::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 3px;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+    border-radius: 50px;
+}
+
+.headerItem:hover::after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+/* Remove underscore for url stuff */
+
+.headerItem a:link {
+    text-decoration: none;
+}
+
+
+.headerItem a:visited {
+    text-decoration: none;
+}
+
+
+.headerItem a:hover {
+    text-decoration: none;
+}
+
+
+.headerItem a:active {
+    text-decoration: none;
+}
+
+.headerItem a {
+    color: #0087ca;
+}
+
+@media only screen and (max-width: 1200px) {
+    .header {
+        display: none;
+    }
 }

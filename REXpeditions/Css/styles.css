@@ -19,11 +19,13 @@ main.index {
 .home-w a {
     scroll-behavior: smooth;
 }
+
 .home-w a:hover {
     background-color: #c3f7c7;
     transition: background-color 1000ms ease;
 
 }
+
 .home-w a:active {
     background-color: rgb(0, 0, 0);
     transition: background-color 500ms ease;
@@ -100,11 +102,13 @@ main.index {
     font-size: 1.5rem;
     font-weight: bold;
 }
+
 .P-Tour a:hover {
     background-color: #138bba;
     transition: background-color 1000ms ease;
 
 }
+
 .P-Tour a:active {
     background-color: rgb(0, 0, 0);
     transition: background-color 500ms ease;
@@ -154,6 +158,7 @@ main.index {
         padding: 1rem;
         border-radius: 50%;
     }
+
     .P-Nav a {
         background-color: rgb(118, 161, 182);
         transition: background-color 500ms ease;
@@ -254,11 +259,13 @@ main.index {
     font-size: 1.5rem;
     justify-self: flex-end;
 }
+
 .B-Tour a:hover {
     background-color: #138bba;
     transition: background-color 1000ms ease;
 
 }
+
 .B-Tour a:active {
     background-color: rgb(0, 0, 0);
     transition: background-color 500ms ease;
@@ -317,6 +324,15 @@ main.index {
     }
 }
 
+@media only screen and
+(max-width: 1659px) and (min-width:1300px) {
+    .B-Tour .white {
+        display: none;
+    }
+    .B-Tour {
+        margin-top: 3rem;
+    }
+}
 
 /*  EXTRA quote and contact index  */
 
@@ -403,11 +419,13 @@ main.index {
     text-decoration: none;
     margin-top: 2rem;
 }
+
 .Contact-L a:hover {
     background-color: rgb(89, 124, 7);
     transition: background-color 1000ms ease;
 
 }
+
 .Contact-L a:active {
     background-color: rgb(0, 0, 0);
     transition: background-color 500ms ease;
@@ -511,11 +529,13 @@ main.index {
     text-decoration: none;
     margin-top: 2rem;
 }
+
 .WhatIs-L a:hover {
     background-color: #043b09;
     transition: background-color 1000ms ease;
 
 }
+
 .WhatIs-L a:active {
     background-color: rgb(0, 0, 0);
     transition: background-color 500ms ease;
@@ -680,11 +700,13 @@ main.Tours {
     text-decoration: none;
     margin-bottom: 1rem;
 }
+
 .PremiumTours a:hover {
     background-color: #043b09;
     transition: background-color 1000ms ease;
 
 }
+
 .PremiumTours a:active {
     background-color: rgb(0, 0, 0);
     transition: background-color 500ms ease;
@@ -786,11 +808,13 @@ main.Tours {
     text-decoration: none;
     margin: 0 auto 1rem auto;
 }
+
 .BasicTours a:hover {
     background-color: #043b09;
     transition: background-color 1000ms ease;
 
 }
+
 .BasicTours a:active {
     background-color: rgb(0, 0, 0);
     transition: background-color 500ms ease;
@@ -882,11 +906,13 @@ main.Tours {
     text-decoration: none;
     margin: 0 auto 1rem auto;
 }
+
 .Hunting a:hover {
     background-color: #043b09;
     transition: background-color 1000ms ease;
 
 }
+
 .Hunting a:active {
     background-color: rgb(0, 0, 0);
     transition: background-color 500ms ease;
@@ -1008,6 +1034,7 @@ main.contact {
     transition: background-color 1000ms ease;
 
 }
+
 .ContactForm a:active {
     background-color: rgb(0, 0, 0);
     transition: background-color 500ms ease;
@@ -1045,7 +1072,7 @@ main.hunting {
 .Hunting-W table th {
     font-family: 'Nova Square', sans-serif;
     width: 2rem;
-    font-size: 8vw;
+    font-size: clamp(3.3rem, 8vw, 8rem);
 }
 
 .Hunting-W table td {
@@ -1116,11 +1143,13 @@ main.hunting {
     text-decoration: none;
     margin: 1rem auto 0 auto;
 }
+
 .HL2 a:hover {
     background-color: #043b09;
     transition: background-color 1000ms ease;
 
 }
+
 .HL2 a:active {
     background-color: rgb(0, 0, 0);
     transition: background-color 500ms ease;
@@ -1258,8 +1287,10 @@ main.hunting {
 }
 
 .Days div a {
+    display: block;
     text-decoration: none;
     color: white;
+    padding: calc(50%/7) calc(200%/7);
 }
 
 .Pre-D,
@@ -1317,6 +1348,10 @@ main.hunting {
     .NextArrow {
         font-size: 2.5rem;
         padding: .5rem;
+    }
+
+    .Days div a {
+        padding: calc(50%/7) calc(140%/7);
     }
 }
 
@@ -1575,9 +1610,11 @@ main.booking4 {
     font-size: 1.3rem;
     font-family: 'Sorts Mill Goudy', serif;
 }
-.cartItemPricing p{
-    font-family:'Times New Roman', Times, serif ;
+
+.cartItemPricing p {
+    font-family: 'Times New Roman', Times, serif;
 }
+
 .cartItem img {
     height: auto;
     aspect-ratio: 1 / 1;
@@ -1614,6 +1651,7 @@ main.booking4 {
         width: 100%;
         margin: 0 auto;
     }
+
     .cartItem img {
         width: 100%;
         aspect-ratio: 1 / 1;
@@ -1621,25 +1659,31 @@ main.booking4 {
         object-fit: cover;
         flex-shrink: 1;
     }
+
     #cart {
         display: flex;
         flex-flow: column wrap;
     }
+
     .cartItemPricing {
         margin-top: 1rem;
         flex-flow: column;
         gap: 1rem;
     }
+
     .cartItem h3 {
         font-size: 1.6rem;
     }
+
     .cartItem p {
         font-size: 1rem;
     }
+
     .cartTotal h3 {
         font-size: 2rem;
         text-align: center;
     }
+
     .cartTotal {
         flex-flow: column-reverse;
     }
@@ -1665,7 +1709,7 @@ main.booking4 {
     text-align: right;
 } */
 
-.booking4 .open-button {
+.booking4 #open-button {
     width: 14rem;
     background-color: #61b767;
     padding: 1rem 2rem;

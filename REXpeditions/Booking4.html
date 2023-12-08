@@ -14,15 +14,22 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="Jurassic-Images/JurassicIcon.png">
     <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Sorts+Mill+Goudy&display=swap"
-    rel="stylesheet">
-
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/81a070d2c0.js" crossorigin="anonymous"></script>
     <script src="js/cartExp.js"></script>
 </head>
 
 <body class="bodybooking4">
     <nav>
-        <section class="nav1">
-
+        <section class="header">
+            <p class="headerItem"><a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;Home</a></p>
+            <p class="headerItem"><a href="experiences.html"><i class="fa-solid fa-compass"></i>&nbsp;Experiences</a>
+            </p>
+            <p class="headerItem"><i class="fa-solid fa-utensils"></i>&nbsp;Dining</p>
+            <p class="headerItem"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Shopping</p>
+            <p class="headerItem"><a href="about.html"><i class="fa-solid fa-users"></i>&nbsp;About Us</a></p>
+            <p class="headerItem"><a href="jurassicpay.html"><i class="fa-solid fa-coins"></i>&nbsp;JurassicPAY</a></p>
+            <p class="headerItem"><i class="fa-solid fa-ticket"></i>&nbsp;Tickets</p>
         </section>
         <section class="nav2">
             <ul>
@@ -65,40 +72,25 @@
             <div id="cart">
 
             </div>
-            <!-- <div class="cartTotal"></div>
-            <div class="cartItemCount"></div>
-            <ul class="Tours">
-                <li>T-rex tour x3</li>
-                <li>Baby dinosaurs x3</li>
-                <li>Hike the volcano x3</li>
-                <li>Trip to the night x3</li>
-            </ul>
-            <ul class="Price">
-                <li>$300,999,990.99</li>
-                <li>$300,999,990.99</li>
-                <li>$300,999,990.99</li>
-                <li>$300,999,990.99</li>
-            </ul> -->
-            <a class="open-button" onclick="openForm()">Buy Tours</a>
-            <!-- <p>$1,234,030,064.99</p> -->
+            <a id="open-button" onclick="openForm()">Buy Tours</a>
         </div>
         <aside class="form-popup" id="buyPopUp">
-            <form action="" class="BuyForm">
+            <form action="#" class="BuyForm">
                 <h1>Buy</h1>
                 <div class="phone">
                     <label for="phone"><b>Phone Number</b></label>
-                    <input type="text" placeholder="Enter your Phone Number" name="phone" required>
+                    <input type="text" placeholder="Enter your Phone Number" name="phone" required id="phone">
                 </div>
                 <div class="PIN">
                     <label for="PIN"><b>PIN Code</b></label>
-                    <input type="number" placeholder="Enter your PIN Code" name="PIN" required>
+                    <input type="number" placeholder="Enter your PIN Code" name="PIN" required id="PIN">
                 </div>
                 <div class="BuyB">
                     <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
                     <button type="submit" class="btn">Buy!</button>
                 </div>
             </form>
-        </aside>    
+        </aside>
     </main>
     <script src="js/PopUp.js"></script>
 </body>

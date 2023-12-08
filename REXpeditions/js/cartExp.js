@@ -103,12 +103,14 @@ function updateCart() {
     if (shop.cart.length === 0) {
         cart.innerHTML = '<h2>Your cart is empty</h2>';
         document.getElementById("TotalPrice").style.display = "none";
+        document.getElementById("open-button").style.display = "none";
         return;
     }
     // loop through cart and add items to cart element
     for (let [index, item] of shop.cart.entries()) {
         total += item.price * item.qty;
         document.getElementById("TotalPrice").style.display = "block";
+        document.getElementById("open-button").style.display = "flex";
         cart.innerHTML += `
         <div class="cartItem">
             <img src="${item.imgSrc}" alt="${item.name}">
@@ -179,8 +181,3 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-
-console.log(localStorage.getItem("Date"));
-
-
-document.querySelector(".Day-Title h2").innerHTML = localStorage.getItem("Date");

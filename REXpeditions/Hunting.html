@@ -7,10 +7,8 @@
     <title>Hunting</title>
     <link rel="stylesheet" href="Css/Nav&Footer.css">
     <link rel="stylesheet" href="Css/styles.css">
-    <link rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Sorts+Mill+Goudy&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Sorts+Mill+Goudy&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@500&family=Nunito&family=Roboto+Mono&family=Ubuntu:wght@500&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Nova+Square&family=Work+Sans&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,12 +16,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
     <link rel="icon" type="image/x-icon" href="Jurassic-Images/JurassicIcon.png">
     <script src="js/timer.js"></script>
+    <script src="https://kit.fontawesome.com/81a070d2c0.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
     <nav>
-        <section class="nav1">
-
+        <section class="header">
+            <p class="headerItem"><a href="index.html"><i class="fa-solid fa-house"></i>&nbsp;Home</a></p>
+            <p class="headerItem"><a href="experiences.html"><i class="fa-solid fa-compass"></i>&nbsp;Experiences</a></p>
+            <p class="headerItem"><i class="fa-solid fa-utensils"></i>&nbsp;Dining</p>
+            <p class="headerItem"><i class="fa-solid fa-cart-shopping"></i>&nbsp;Shopping</p>
+            <p class="headerItem"><a href="about.html"><i class="fa-solid fa-users"></i>&nbsp;About Us</a></p>
+            <p class="headerItem"><a href="jurassicpay.html"><i class="fa-solid fa-coins"></i>&nbsp;JurassicPAY</a></p>
+            <p class="headerItem"><i class="fa-solid fa-ticket"></i>&nbsp;Tickets</p>    
         </section>
         <section class="nav2">
             <ul>
@@ -64,42 +69,28 @@
             <section class="Timer"> <!--JS involved to change the numbers as time-->
                 <table>
                     <thead>
-                        <th class="Tdays"></th>
-                        <th>:</th>
-                        <th class="Thours"></th>
-                        <th>:</th>
-                        <th class="Tminutes"></th>
-                        <th>:</th>
-                        <th class="Tseconds"></th>
+                        <tr>
+                            <th class="Tdays"></th>
+                            <th>:</th>
+                            <th class="Thours"></th>
+                            <th>:</th>
+                            <th class="Tminutes"></th>
+                            <th>:</th>
+                            <th class="Tseconds"></th>    
+                        </tr>
                     </thead>
                     <tbody>
-                        <td>Days</td>
-                        <td></td>
-                        <td>Hours</td>
-                        <td></td>
-                        <td>Minutes</td>
-                        <td></td>
-                        <td>Seconds</td>
+                        <tr>
+                            <td>Days</td>
+                            <td></td>
+                            <td>Hours</td>
+                            <td></td>
+                            <td>Minutes</td>
+                            <td></td>
+                            <td>Seconds</td>    
+                        </tr>
                     </tbody>
                 </table>
-                <!-- <ul class="T-numbers">
-                    <li>1</li>
-                    <li>:</li>
-                    <li>24</li>
-                    <li>:</li>
-                    <li>12</li>
-                    <li>:</li>
-                    <li>57</li>
-                    <li>:</li>
-                    <li>03</li>
-                </ul>
-                <ul class="T-dates">
-                    <li>Month</li>
-                    <li>Days</li>
-                    <li>Hours</li>
-                    <li>Minutes</li>
-                    <li>Seconds</li>
-                </ul> -->
             </section>
             <section class="HL2">
                 <p>Not for the faint of heart, customers get to experience the experience of hunting dinosaurs and get
@@ -113,10 +104,10 @@
                     complete the waiver and be 18+ for this exhibit.</b></p> 
                 <img src="Jurassic-Images/Hunting.jpg" alt="Our hunting team">
                 <a onclick="openForm()">Reserve now</a>
+            </section>
         </section>
-        
-    
     </main>
+
     <footer>
         <img src="Jurassic-Images/JPLOGO.png" alt="Jurassic Park logo">
         <section class="F-Contacts">
@@ -148,22 +139,22 @@
     </footer>
 
     <aside class="form-popup" id="buyPopUp">
-        <form action="" class="BuyForm">
+        <form action="#" class="BuyForm">
             <h1>Buy</h1>
             <div class="phone">
                 <label for="phone"><b>Phone Number</b></label>
-                <input type="text" placeholder="Enter your Phone Number" name="phone" required>
+                <input type="text" placeholder="Enter your Phone Number" name="phone" required id="phone">
             </div>
             <div class="PIN">
                 <label for="PIN"><b>PIN Code</b></label>
-                <input type="number" placeholder="Enter your PIN Code" name="PIN" required>
+                <input type="number" placeholder="Enter your PIN Code" name="PIN" required id="PIN">
             </div>
             <div class="BuyB">
                 <button type="button" class="btn cancel" onclick="closeForm()">Cancel</button>
                 <button type="submit" class="btn">Buy!</button>
             </div>
         </form>
-    </aside>
+</aside>
 
     <script src="js/PopUp.js"></script>
 </body>
