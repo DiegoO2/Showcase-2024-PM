@@ -163,6 +163,10 @@ main.index {
         background-color: rgb(118, 161, 182);
         transition: background-color 500ms ease;
     }
+    .P-Tour h3 {
+        margin-top: 1rem;
+    }
+    
 }
 
 @media only screen and (max-width: 700px) {
@@ -612,6 +616,12 @@ main.Tours {
     margin-left: 10%;
     margin-right: 10%;
 }
+@media only screen and (max-width: 600px) {
+    .Tours h2 {
+        padding: 2rem 0;
+        font-size: 2rem;
+    }    
+}
 
 @media only screen and (max-width: 1200px) {
     .Our-Staff {
@@ -652,6 +662,7 @@ main.Tours {
 .PremiumTours img[src$=".jpg"] {
     object-fit: cover;
     width: 50%;
+    border: black 2px solid;
 }
 
 .PTL {
@@ -665,7 +676,7 @@ main.Tours {
 
 .PremiumTours h3 {
     width: 100%;
-    font-size: clamp(2rem, 5vw, 2.5rem);
+    font-size: clamp(1.8rem, 5vw, 2.5rem);
 }
 
 .PremiumTours h4 {
@@ -721,6 +732,11 @@ main.Tours {
 @media only screen and (max-width: 1600px) {
     .PremiumTours {
         flex-direction: column;
+        background-color: #caf3d3;
+        border-radius: 1rem;
+        overflow: hidden;
+        padding: .5rem;
+        box-shadow: black 0 0 5px .1px;
     }
 
     .PTL,
@@ -730,16 +746,33 @@ main.Tours {
 
     #baby {
         flex-direction: column-reverse;
+        justify-content: start;
     }
-
-    .PremiumTours::after,
-    .PremiumTours::before {
+    .PremiumTours::before, .PremiumTours::after {
         display: none;
     }
-
     .PTL {
-        padding: 2rem 0;
+        padding: 1rem 0;
     }
+    .PremiumTours h3 {
+        font-size: 1.6rem;
+    }
+    .PremiumTours h4 {
+        font-size: 1.3rem;
+    }    
+    .PremiumTours p {
+        font-size: 1rem;
+        text-align: justify;
+        margin: .5rem auto;
+    }
+    .PremiumTours ul {
+        font-size: 1.4rem;
+    }
+    .PremiumTours a {
+        font-size: 1.6rem;
+        margin: 0 auto;
+    }
+    
 }
 
 /* basic tours tours */
@@ -768,6 +801,7 @@ main.Tours {
     /* for mobile version use media to column for the image */
     object-fit: cover;
     width: 50%;
+    border: black 2px solid;
 }
 
 .BasicTours h3 {
@@ -823,6 +857,11 @@ main.Tours {
 @media only screen and (max-width: 1400px) {
     .BasicTours {
         flex-direction: column;
+        background-color: #caf3d3;
+        border-radius: 1rem;
+        overflow: hidden;
+        padding: .5rem;
+        box-shadow: black 0 0 5px .1px;
     }
 
     .BTL,
@@ -834,11 +873,9 @@ main.Tours {
         flex-direction: column-reverse;
     }
 
-    .BasicTours::after,
-    .BasicTours::before {
+    .BasicTours::before, .BasicTours::after {
         display: none;
     }
-
     .BasicTours a {
         width: 100%;
     }
@@ -850,10 +887,27 @@ main.Tours {
     .BasicTours #carB {
         margin: 0 auto;
     }
-
-    .BTL {
-        padding: 2rem 0;
+    .BasicTours h3 {
+        font-size: 1.6rem;
     }
+    .BTL {
+        padding: 1rem 0;
+    }
+    .BasicTours h4 {
+        font-size: 1.3rem;
+    }    
+    .BasicTours p {
+        font-size: 1rem;
+        text-align: justify;
+        margin: .5rem auto;
+    }
+    .BasicTours ul {
+        font-size: 1.4rem;
+    }
+    .BasicTours a {
+        font-size: 1.6rem;
+    }
+
 }
 
 
@@ -949,11 +1003,31 @@ main.Tours {
     }
 
     .HL {
-        padding: 2rem 0;
+        padding: 1rem 0;
     }
-
+    .BTL {
+        padding: 1rem 0;
+    }
+    #HTitle::before {
+        display: none;
+    }
 }
-
+@media only screen and (max-width: 600px) {
+    .Hunting h3 {
+        font-size: 1.6rem;
+    }
+    .Hunting p {
+        font-size: 1rem;
+        text-align: justify;
+        margin: .5rem auto;
+    }
+    .Hunting ul {
+        font-size: 1.4rem;
+    }
+    .Hunting a {
+        font-size: 1.6rem;
+    }
+}
 
 /* Contact page css */
 
