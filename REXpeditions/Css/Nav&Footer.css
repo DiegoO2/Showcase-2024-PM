@@ -72,11 +72,11 @@ footer img[src$=".png"] {
 }
 .nav2 ul {
     margin: auto;
-    width: 80vw;
+    width: 80%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     list-style: none;
 }
 @media only screen and (max-width: 600px) {
